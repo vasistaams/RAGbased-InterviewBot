@@ -1,0 +1,439 @@
+{
+  "users": {
+    "dc5d2a6a-41dc-4363-b402-50c097167589": {
+      "id": "dc5d2a6a-41dc-4363-b402-50c097167589",
+      "name": "Demo User",
+      "email": "demo@gmail.com",
+      "avatar": "DU",
+      "phone": "",
+      "authMethod": "google",
+      "createdAt": "2026-03-29T16:35:55.812Z",
+      "interviewsTaken": 7,
+      "globalRank": 192,
+      "totalGlobalUsers": 2847,
+      "regionalRank": 17,
+      "totalRegionalUsers": 342,
+      "region": "India",
+      "interviewHistory": [
+        {
+          "id": "71f0fc62-7169-43c1-b24f-31da4509b2b5",
+          "date": "2026-03-10T16:35:55.812Z",
+          "score": 73,
+          "questionsAsked": 9,
+          "duration": 21,
+          "category": "Technical"
+        },
+        {
+          "id": "c98d6abb-5b88-4b44-98a0-f4162925dc53",
+          "date": "2026-03-14T16:35:55.812Z",
+          "score": 73,
+          "questionsAsked": 6,
+          "duration": 23,
+          "category": "Mixed"
+        },
+        {
+          "id": "53a077f7-2507-48ea-b32b-9790a0dd3c18",
+          "date": "2026-03-16T16:35:55.812Z",
+          "score": 82,
+          "questionsAsked": 10,
+          "duration": 11,
+          "category": "SQL"
+        },
+        {
+          "id": "9e96215a-66ce-4a07-9a6e-d1138b035d4f",
+          "date": "2026-03-18T16:35:55.812Z",
+          "score": 80,
+          "questionsAsked": 8,
+          "duration": 28,
+          "category": "Mixed"
+        },
+        {
+          "id": "112fac90-44da-43a7-976a-912de692b9b3",
+          "date": "2026-03-21T16:35:55.812Z",
+          "score": 70,
+          "questionsAsked": 12,
+          "duration": 28,
+          "category": "OOP"
+        },
+        {
+          "id": "8ad86bf5-0318-4621-8223-5a4d0059b042",
+          "date": "2026-03-26T16:35:55.812Z",
+          "score": 86,
+          "questionsAsked": 14,
+          "duration": 15,
+          "category": "SQL"
+        },
+        {
+          "id": "c31f8095-14d5-4333-a769-07cbdd1595db",
+          "date": "2026-03-29T17:01:40.536Z",
+          "score": 21,
+          "questionsAsked": 3,
+          "duration": 2,
+          "category": "Mixed"
+        }
+      ],
+      "resumePath": null,
+      "theme": "dark",
+      "lastLogin": "2026-03-30T10:19:08.386Z"
+    },
+    "3822c2bb-2c82-459a-9072-821e3c7f6349": {
+      "id": "3822c2bb-2c82-459a-9072-821e3c7f6349",
+      "name": "Priya Sharma",
+      "email": "priya.sharma@gmail.com",
+      "avatar": "PS",
+      "phone": "",
+      "authMethod": "google",
+      "createdAt": "2026-03-29T18:12:34.570Z",
+      "interviewsTaken": 2,
+      "globalRank": 146,
+      "totalGlobalUsers": 2847,
+      "regionalRank": 33,
+      "totalRegionalUsers": 342,
+      "region": "India",
+      "interviewHistory": [
+        {
+          "id": "d4aab44f-9689-45a0-bae4-b1447f03ecb1",
+          "date": "2026-03-03T18:12:34.570Z",
+          "score": 64,
+          "questionsAsked": 6,
+          "duration": 14,
+          "category": "SQL"
+        },
+        {
+          "id": "90001f49-9c9e-423d-997d-1a613fd614dd",
+          "date": "2026-03-06T18:12:34.570Z",
+          "score": 63,
+          "questionsAsked": 8,
+          "duration": 29,
+          "category": "Technical"
+        },
+        {
+          "id": "93c38ec6-8f62-4ec7-960e-6e1b3b0cfe96",
+          "date": "2026-03-10T18:12:34.570Z",
+          "score": 71,
+          "questionsAsked": 9,
+          "duration": 24,
+          "category": "Behavioral"
+        },
+        {
+          "id": "102cd8ae-9e5c-4f05-886e-7db186a8991a",
+          "date": "2026-03-14T18:12:34.570Z",
+          "score": 88,
+          "questionsAsked": 13,
+          "duration": 24,
+          "category": "Behavioral"
+        },
+        {
+          "id": "7ffbc131-4f39-4dc3-b5c2-b1781cb30dd7",
+          "date": "2026-03-15T18:12:34.570Z",
+          "score": 70,
+          "questionsAsked": 8,
+          "duration": 15,
+          "category": "SQL"
+        },
+        {
+          "id": "8ce905f1-1365-4d0a-b1c7-6a1cec8a35fa",
+          "date": "2026-03-19T18:12:34.570Z",
+          "score": 70,
+          "questionsAsked": 7,
+          "duration": 28,
+          "category": "Mixed"
+        },
+        {
+          "id": "12205b48-cd31-4634-8ed3-c3c2ff730a57",
+          "date": "2026-03-21T18:12:34.570Z",
+          "score": 83,
+          "questionsAsked": 11,
+          "duration": 14,
+          "category": "Technical"
+        },
+        {
+          "id": "4afd27f8-e1f6-469c-9ff5-77629ca87058",
+          "date": "2026-03-26T18:12:34.570Z",
+          "score": 96,
+          "questionsAsked": 9,
+          "duration": 19,
+          "category": "Behavioral"
+        }
+      ],
+      "resumePath": null,
+      "theme": "dark",
+      "lastLogin": "2026-03-29T18:12:34.570Z"
+    },
+    "user_3Bf2OVX67F4ZRMIFLBZaFHyvt4Q": {
+      "id": "user_3Bf2OVX67F4ZRMIFLBZaFHyvt4Q",
+      "name": "vasista ams",
+      "email": "vasistaams@gmail.com",
+      "phone": "",
+      "avatar": "V",
+      "authMethod": "google",
+      "interviewsTaken": 15,
+      "globalRank": 68,
+      "totalGlobalUsers": 2847,
+      "regionalRank": 8,
+      "totalRegionalUsers": 342,
+      "region": "India",
+      "interviewHistory": [
+        {
+          "id": "002f5218-82ea-4a7a-9874-5ee1b48fa139",
+          "date": "2026-03-12T16:18:07.479Z",
+          "score": 72,
+          "questionsAsked": 6,
+          "duration": 29,
+          "category": "Technical"
+        },
+        {
+          "id": "f819b04e-9bc4-4bb1-8368-7b7e971e068c",
+          "date": "2026-03-13T16:18:07.479Z",
+          "score": 74,
+          "questionsAsked": 5,
+          "duration": 25,
+          "category": "Behavioral"
+        },
+        {
+          "id": "c8e7e186-9dbb-4e2b-a280-1382d6cd2041",
+          "date": "2026-03-18T16:18:07.479Z",
+          "score": 64,
+          "questionsAsked": 6,
+          "duration": 23,
+          "category": "Technical"
+        },
+        {
+          "id": "35eb18dc-a4de-4889-aed9-bb0dfa1a37af",
+          "date": "2026-03-20T16:18:07.479Z",
+          "score": 67,
+          "questionsAsked": 10,
+          "duration": 11,
+          "category": "SQL"
+        },
+        {
+          "id": "3de76054-1106-40be-9395-e13ce71a4b40",
+          "date": "2026-03-24T16:18:07.479Z",
+          "score": 88,
+          "questionsAsked": 7,
+          "duration": 17,
+          "category": "Technical"
+        },
+        {
+          "id": "d805729d-dfe0-4371-ad07-b65e523416e6",
+          "date": "2026-03-27T16:18:07.479Z",
+          "score": 69,
+          "questionsAsked": 13,
+          "duration": 24,
+          "category": "SQL"
+        },
+        {
+          "id": "cb94b4d1-9449-4536-8021-bbf41e4d8f49",
+          "date": "2026-03-30T16:18:07.479Z",
+          "score": 90,
+          "questionsAsked": 11,
+          "duration": 29,
+          "category": "Technical"
+        },
+        {
+          "id": "2280cfb7-e528-475e-8762-9710535055da",
+          "date": "2026-03-31T16:18:07.479Z",
+          "score": 101,
+          "questionsAsked": 14,
+          "duration": 22,
+          "category": "Mixed"
+        }
+      ],
+      "resumePath": "C:\\Users\\AMSV\\OneDrive\\Desktop\\RAGbased InterviewBot\\data\\uploads\\f07e29bb41e92d9e2c85507e3efae504",
+      "theme": "light",
+      "lastLogin": "2026-04-05T16:18:07.479Z",
+      "resumeName": "Pramod - 23071A67D9.pdf"
+    },
+    "google_100998968522157441594": {
+      "id": "google_100998968522157441594",
+      "name": "Gagan",
+      "email": "g5a4g1a1n@gmail.com",
+      "phone": "",
+      "avatar": "G",
+      "authMethod": "google",
+      "interviewsTaken": 13,
+      "globalRank": 524,
+      "totalGlobalUsers": 2847,
+      "regionalRank": 36,
+      "totalRegionalUsers": 342,
+      "region": "India",
+      "interviewHistory": [
+        {
+          "id": "40ce00fe-44b6-463b-aa3a-63a00e21a8f1",
+          "date": "2026-03-04T17:41:03.423Z",
+          "score": 77,
+          "questionsAsked": 9,
+          "duration": 26,
+          "category": "SQL"
+        },
+        {
+          "id": "d964964e-e66f-4e14-be25-16d4a37d4b81",
+          "date": "2026-03-08T17:41:03.423Z",
+          "score": 89,
+          "questionsAsked": 10,
+          "duration": 11,
+          "category": "Technical"
+        },
+        {
+          "id": "9571162d-bf6c-419d-b83f-852e6d533a4e",
+          "date": "2026-03-12T17:41:03.423Z",
+          "score": 79,
+          "questionsAsked": 9,
+          "duration": 26,
+          "category": "OOP"
+        },
+        {
+          "id": "0ff2e8e3-06b2-492d-8ce7-ddfd80dd5444",
+          "date": "2026-03-14T17:41:03.423Z",
+          "score": 83,
+          "questionsAsked": 11,
+          "duration": 20,
+          "category": "Mixed"
+        },
+        {
+          "id": "fc744e85-a583-4dd3-aa6d-a541f748d610",
+          "date": "2026-03-17T17:41:03.424Z",
+          "score": 83,
+          "questionsAsked": 9,
+          "duration": 13,
+          "category": "SQL"
+        },
+        {
+          "id": "dd0c986e-df02-47e3-aa86-82f040fb68d8",
+          "date": "2026-03-20T17:41:03.424Z",
+          "score": 74,
+          "questionsAsked": 5,
+          "duration": 29,
+          "category": "SQL"
+        },
+        {
+          "id": "cf2bd05e-39bf-4c7e-9faa-715152e7c4b2",
+          "date": "2026-03-24T17:41:03.424Z",
+          "score": 86,
+          "questionsAsked": 9,
+          "duration": 21,
+          "category": "SQL"
+        },
+        {
+          "id": "cd85e4cb-4098-4d3a-a3eb-e69e51cdfce0",
+          "date": "2026-03-27T17:41:03.424Z",
+          "score": 96,
+          "questionsAsked": 14,
+          "duration": 22,
+          "category": "Technical"
+        },
+        {
+          "id": "320f4925-ed7a-4953-a052-e3accd0f1cea",
+          "date": "2026-03-28T17:41:03.424Z",
+          "score": 106,
+          "questionsAsked": 13,
+          "duration": 21,
+          "category": "Technical"
+        },
+        {
+          "id": "a83d8faf-c58b-48cd-9a32-debfecdd1e93",
+          "date": "2026-04-01T17:41:03.424Z",
+          "score": 77,
+          "questionsAsked": 7,
+          "duration": 24,
+          "category": "Mixed"
+        }
+      ],
+      "resumePath": null,
+      "theme": "dark",
+      "lastLogin": "2026-04-05T17:41:03.424Z"
+    },
+    "google_105669259662219304363": {
+      "id": "google_105669259662219304363",
+      "name": "Apashyamkirikiri",
+      "email": "apashyamkirikiri59@gmail.com",
+      "phone": "",
+      "avatar": "A",
+      "authMethod": "google",
+      "interviewsTaken": 12,
+      "globalRank": 393,
+      "totalGlobalUsers": 2847,
+      "regionalRank": 99,
+      "totalRegionalUsers": 342,
+      "region": "India",
+      "interviewHistory": [
+        {
+          "id": "6f3dfa9d-c36a-44fa-914d-29ba78c42b3d",
+          "date": "2026-03-10T08:12:54.774Z",
+          "score": 61,
+          "questionsAsked": 13,
+          "duration": 19,
+          "category": "SQL"
+        },
+        {
+          "id": "57c2d568-7b26-4df4-9b26-2620a681c283",
+          "date": "2026-03-13T08:12:54.775Z",
+          "score": 66,
+          "questionsAsked": 6,
+          "duration": 26,
+          "category": "Technical"
+        },
+        {
+          "id": "bc5d83a6-8375-43c4-83b2-f56c6f0013f0",
+          "date": "2026-03-14T08:12:54.775Z",
+          "score": 69,
+          "questionsAsked": 6,
+          "duration": 23,
+          "category": "Technical"
+        },
+        {
+          "id": "dd17ca18-e33e-40d4-8692-2c6afbf8a873",
+          "date": "2026-03-17T08:12:54.775Z",
+          "score": 66,
+          "questionsAsked": 14,
+          "duration": 18,
+          "category": "Technical"
+        },
+        {
+          "id": "f4477613-8569-4b9b-9847-815b43dccfc0",
+          "date": "2026-03-22T08:12:54.775Z",
+          "score": 69,
+          "questionsAsked": 14,
+          "duration": 18,
+          "category": "SQL"
+        },
+        {
+          "id": "fc3aecfa-dd72-490d-bc22-22b991b73653",
+          "date": "2026-03-24T08:12:54.775Z",
+          "score": 79,
+          "questionsAsked": 14,
+          "duration": 24,
+          "category": "OOP"
+        },
+        {
+          "id": "0a868c5d-2daf-4551-83c7-ac3ea9adf200",
+          "date": "2026-03-28T08:12:54.775Z",
+          "score": 104,
+          "questionsAsked": 8,
+          "duration": 29,
+          "category": "SQL"
+        },
+        {
+          "id": "3548a4f9-7eca-4a35-8a8f-73ac125b97b2",
+          "date": "2026-03-31T08:12:54.775Z",
+          "score": 105,
+          "questionsAsked": 8,
+          "duration": 13,
+          "category": "OOP"
+        },
+        {
+          "id": "99afe2f4-0e28-481b-8536-77d63c945b1b",
+          "date": "2026-04-01T08:12:54.775Z",
+          "score": 99,
+          "questionsAsked": 11,
+          "duration": 16,
+          "category": "OOP"
+        }
+      ],
+      "resumePath": "C:\\Users\\AMSV\\OneDrive\\Desktop\\RAGbased InterviewBot\\data\\uploads\\1b4af505bcda2605b123bc060d8218da",
+      "theme": "dark",
+      "lastLogin": "2026-04-06T08:12:54.775Z",
+      "resumeName": "Guide Approval Form 4.pdf"
+    }
+  }
+}

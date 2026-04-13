@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ──────────────────────────────────────── */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-50:  #f5f3ff;
+  --color-brand-100: #ede9fe;
+  --color-brand-200: #ddd6fe;
+  --color-brand-300: #c4b5fd;
+  --color-brand-400: #a78bfa;
+  --color-brand-500: #8b5cf6;
+  --color-brand-600: #7c3aed;
+  --color-brand-700: #6d28d9;
+  --color-brand-800: #5b21b6;
+  --color-brand-900: #4c1d95;
+
+  --color-surface:       #f8f7ff;
+  --color-surface-card:  #ffffff;
+  --color-surface-dark:  #0f0b1a;
+  --color-surface-card-dark: #1a1528;
+
+  --color-border-subtle: #e9e5f5;
+}
+
+/* ── Base layer ─────────────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-surface);
+    color: #1e1b2e;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Dark mode body */
+  .dark body,
+  html.dark body {
+    background: var(--color-surface-dark);
+    color: #e8e4f0;
+  }
+}
+
+/* ── Utility helpers ────────────────────────────────────── */
+@layer utilities {
+  .glass {
+    backdrop-filter: blur(16px) saturate(1.6);
+    -webkit-backdrop-filter: blur(16px) saturate(1.6);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg, #a78bfa 0%, #818cf8 100%);
+  }
+
+  .gradient-success {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  }
+
+  .gradient-warm {
+    background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+  }
+
+  .shadow-card {
+    box-shadow: 0 1px 3px rgba(139, 92, 246, 0.04),
+                0 4px 16px rgba(139, 92, 246, 0.06);
+  }
+
+  .shadow-card-hover {
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.08),
+                0 8px 32px rgba(139, 92, 246, 0.10);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 24px rgba(139, 92, 246, 0.25),
+                0 0 48px rgba(99, 102, 241, 0.15);
+  }
+
+  /* dark mode card surface */
+  .dark .card-surface {
+    background: var(--color-surface-card-dark);
+    border-color: rgba(139, 92, 246, 0.12);
+  }
+}
+
+/* ── Skeleton animation ──────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg,
+    #e9e5f5 25%,
+    #f5f3ff 37%,
+    #e9e5f5 63%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: 0.5rem;
+}
+
+.dark .skeleton {
+  background: linear-gradient(90deg,
+    #2a2440 25%,
+    #352e4a 37%,
+    #2a2440 63%
+  );
+  background-size: 200% 100%;
+}
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.4);
+}
+
+/* ── Recharts overrides ──────────────────────────────────── */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #e9e5f5;
+  stroke-dasharray: 4 4;
+}
+
+.dark .recharts-cartesian-grid-horizontal line,
+.dark .recharts-cartesian-grid-vertical line {
+  stroke: rgba(139, 92, 246, 0.12);
+}

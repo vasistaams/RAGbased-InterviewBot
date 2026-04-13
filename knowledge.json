@@ -1,0 +1,159 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "description": "Interview preparation knowledge base for RAG chatbot",
+    "lastUpdated": "2026-03-29",
+    "totalEntries": 20
+  },
+  "categories": [
+    "Introduction",
+    "Behavioral",
+    "Technical - OOP",
+    "Technical - SQL",
+    "Technical - JavaScript",
+    "Technical - General",
+    "Situational"
+  ],
+  "entries": [
+    {
+      "id": 1,
+      "category": "Introduction",
+      "keywords": ["tell me about yourself", "introduce yourself", "who are you", "about yourself", "self introduction", "introduction"],
+      "question": "Tell me about yourself.",
+      "answer": "When answering 'Tell me about yourself,' follow this proven structure:\n\n**1. Present:** Start with your current role or recent experience.\n*Example:* \"I'm currently a software developer at XYZ Corp, where I specialize in building scalable web applications using React and Node.js.\"\n\n**2. Past:** Briefly mention your relevant background.\n*Example:* \"I graduated with a B.Tech in Computer Science and previously worked at ABC Inc., where I led a team that reduced API response time by 40%.\"\n\n**3. Future:** Connect your goals to this opportunity.\n*Example:* \"I'm excited about this role because it aligns with my passion for building user-centric products, and I'd love to contribute to your team's growth.\"\n\n**Pro Tip:** Keep it under 2 minutes, stay professional, and tailor it to the job you're applying for."
+    },
+    {
+      "id": 2,
+      "category": "Behavioral",
+      "keywords": ["strengths", "strength", "what are your strengths", "best qualities", "strong points", "good at"],
+      "question": "What are your strengths?",
+      "answer": "When discussing strengths, pick 2-3 that are directly relevant to the role:\n\n**1. Problem-Solving:** \"I enjoy breaking down complex problems into manageable parts. At my last job, I debugged a critical production issue that had been open for weeks by systematically isolating the root cause.\"\n\n**2. Adaptability:** \"I quickly learn new technologies. I picked up TypeScript within a week and migrated a legacy codebase, improving type safety across the project.\"\n\n**3. Communication:** \"I bridge the gap between technical and non-technical stakeholders. I regularly present sprint demos to product managers and translate technical decisions into business impact.\"\n\n**Pro Tip:** Always back your strengths with a concrete example using the STAR method (Situation, Task, Action, Result)."
+    },
+    {
+      "id": 3,
+      "category": "Behavioral",
+      "keywords": ["weaknesses", "weakness", "what are your weaknesses", "areas of improvement", "weak points", "improve"],
+      "question": "What are your weaknesses?",
+      "answer": "When discussing weaknesses, show self-awareness and growth:\n\n**Good Approach — Be honest but show improvement:**\n\n• \"I used to struggle with delegation — I wanted to handle everything myself. I've since learned to trust my team and use tools like Jira to distribute tasks effectively, which improved our team velocity by 25%.\"\n\n• \"I sometimes over-engineer solutions. I've been working on this by setting time limits for research phases and focusing on MVP first, then iterating.\"\n\n• \"Public speaking used to make me nervous. I joined a Toastmasters club and now regularly present at team meetings and conferences.\"\n\n**What to Avoid:**\n❌ Don't say \"I'm a perfectionist\" (it's overused)\n❌ Don't mention a weakness critical to the job\n❌ Don't say \"I have no weaknesses\"\n\n**Pro Tip:** Always show the action you've taken to address the weakness."
+    },
+    {
+      "id": 4,
+      "category": "Technical - OOP",
+      "keywords": ["oops", "oop", "object oriented", "object-oriented programming", "oops concepts", "oop concepts", "encapsulation", "polymorphism", "inheritance", "abstraction"],
+      "question": "Explain the four pillars of Object-Oriented Programming (OOP).",
+      "answer": "The four pillars of OOP are fundamental to software design:\n\n**1. Encapsulation** 🔒\nBundling data (properties) and methods that operate on that data within a single unit (class), while restricting direct access from outside.\n```\nclass BankAccount {\n  private balance = 0;\n  public deposit(amount) { this.balance += amount; }\n  public getBalance() { return this.balance; }\n}\n```\n\n**2. Inheritance** 🧬\nA mechanism where a child class inherits properties and methods from a parent class, promoting code reuse.\n```\nclass Animal { speak() { } }\nclass Dog extends Animal { speak() { return 'Woof!'; } }\n```\n\n**3. Polymorphism** 🔄\nThe ability of objects to take many forms. The same method name can behave differently based on the object calling it.\n- **Compile-time:** Method overloading\n- **Runtime:** Method overriding\n\n**4. Abstraction** 🎭\nHiding complex implementation details and exposing only the necessary interface to the user.\n```\nclass EmailService {\n  // User only calls send(), not the SMTP details\n  send(to, subject, body) { ... }\n}\n```\n\n**Interview Tip:** Be ready to give real-world analogies (e.g., a car steering wheel is abstraction — you don't need to know how the engine works)."
+    },
+    {
+      "id": 5,
+      "category": "Technical - SQL",
+      "keywords": ["sql", "sql basics", "structured query language", "database", "queries", "select", "join", "where", "sql commands"],
+      "question": "Explain SQL basics and common commands.",
+      "answer": "SQL (Structured Query Language) is used to manage and query relational databases:\n\n**DDL — Data Definition Language (Structure)**\n• `CREATE TABLE users (id INT PRIMARY KEY, name VARCHAR(100));`\n• `ALTER TABLE users ADD email VARCHAR(255);`\n• `DROP TABLE users;`\n\n**DML — Data Manipulation Language (Data)**\n• `INSERT INTO users (name) VALUES ('Alice');`\n• `UPDATE users SET name = 'Bob' WHERE id = 1;`\n• `DELETE FROM users WHERE id = 1;`\n\n**DQL — Data Query Language (Retrieval)**\n• `SELECT * FROM users WHERE name LIKE 'A%';`\n• `SELECT COUNT(*) FROM orders GROUP BY status HAVING COUNT(*) > 5;`\n\n**Key Concepts:**\n• **JOINs:** INNER, LEFT, RIGHT, FULL OUTER — used to combine rows from 2+ tables\n• **Indexes:** Speed up queries on large tables\n• **Normalization:** Reducing data redundancy (1NF → 2NF → 3NF → BCNF)\n• **ACID Properties:** Atomicity, Consistency, Isolation, Durability\n\n**Interview Tip:** Practice writing queries by hand. Common interview questions include finding the 2nd highest salary, self-joins, and subqueries."
+    },
+    {
+      "id": 6,
+      "category": "Technical - SQL",
+      "keywords": ["join", "joins", "sql join", "inner join", "left join", "right join", "outer join", "cross join"],
+      "question": "What are the different types of SQL JOINs?",
+      "answer": "SQL JOINs combine rows from two or more tables based on a related column:\n\n**1. INNER JOIN** — Returns only matching rows from both tables\n```sql\nSELECT e.name, d.dept_name\nFROM employees e\nINNER JOIN departments d ON e.dept_id = d.id;\n```\n\n**2. LEFT JOIN (LEFT OUTER JOIN)** — All rows from left table + matching rows from right\n```sql\nSELECT e.name, d.dept_name\nFROM employees e\nLEFT JOIN departments d ON e.dept_id = d.id;\n-- Shows all employees, even those without a department\n```\n\n**3. RIGHT JOIN** — All rows from right table + matching rows from left\n\n**4. FULL OUTER JOIN** — All rows from both tables, with NULLs where no match\n\n**5. CROSS JOIN** — Cartesian product (every row × every row)\n\n**6. SELF JOIN** — A table joined with itself\n```sql\nSELECT e1.name AS employee, e2.name AS manager\nFROM employees e1\nJOIN employees e2 ON e1.manager_id = e2.id;\n```\n\n**Visual Summary:**\n• INNER = ∩ (intersection)\n• LEFT = All left + intersection\n• RIGHT = All right + intersection\n• FULL = All left + All right (union)"
+    },
+    {
+      "id": 7,
+      "category": "Behavioral",
+      "keywords": ["why should we hire you", "why hire you", "why you", "why are you the best", "hire"],
+      "question": "Why should we hire you?",
+      "answer": "Structure your answer using three pillars:\n\n**1. Skills Match:** \"My technical skills in [specific tech stack] directly align with what you're looking for. I've built similar products at scale.\"\n\n**2. Proven Impact:** \"In my previous role, I [specific metric-driven achievement]. I don't just write code — I drive results.\"\n\n**3. Cultural Fit:** \"I've researched your company's values of [mention real values]. I thrive in [collaborative/fast-paced/innovative] environments, as demonstrated by [example].\"\n\n**Template Answer:**\n\"You should hire me because I bring a unique combination of technical expertise and business understanding. I've built [relevant project] using [relevant tech], which resulted in [measurable outcome]. I'm not just looking for any job — I specifically chose to apply here because [genuine reason about the company]. I'm confident I can contribute to [specific team/product goal].\"\n\n**Pro Tip:** Research the company beforehand and mention something specific about their product, culture, or recent news."
+    },
+    {
+      "id": 8,
+      "category": "Technical - OOP",
+      "keywords": ["class", "object", "class vs object", "difference between class and object", "instance"],
+      "question": "What is the difference between a Class and an Object?",
+      "answer": "**Class vs Object — A Clear Comparison:**\n\n| Feature | Class | Object |\n|---------|-------|--------|\n| Definition | A blueprint/template | An instance of a class |\n| Memory | No memory allocated | Memory allocated on creation |\n| Creation | Defined using `class` keyword | Created using `new` keyword |\n| Count | Defined once | Multiple objects from same class |\n\n**Real-World Analogy:**\n• **Class** = Architectural blueprint of a house\n• **Object** = The actual house built from that blueprint\n\n**Code Example:**\n```javascript\n// Class (blueprint)\nclass Car {\n  constructor(brand, model) {\n    this.brand = brand;\n    this.model = model;\n  }\n  drive() { return `${this.brand} ${this.model} is driving!`; }\n}\n\n// Objects (instances)\nconst car1 = new Car('Toyota', 'Camry');\nconst car2 = new Car('Honda', 'Civic');\n```\n\n**Key Point:** A class defines the structure and behavior; an object is a concrete entity with actual values."
+    },
+    {
+      "id": 9,
+      "category": "Technical - JavaScript",
+      "keywords": ["javascript", "var let const", "hoisting", "scope", "closure", "closures", "js basics"],
+      "question": "Explain var, let, and const in JavaScript.",
+      "answer": "Understanding variable declarations is fundamental to JavaScript:\n\n| Feature | `var` | `let` | `const` |\n|---------|-------|-------|--------|\n| Scope | Function-scoped | Block-scoped | Block-scoped |\n| Hoisting | Yes (initialized as `undefined`) | Yes (TDZ — not accessible) | Yes (TDZ — not accessible) |\n| Re-declaration | ✅ Allowed | ❌ Not allowed | ❌ Not allowed |\n| Re-assignment | ✅ Allowed | ✅ Allowed | ❌ Not allowed |\n\n**TDZ (Temporal Dead Zone):** The period between entering scope and the variable's declaration where `let`/`const` variables exist but cannot be accessed.\n\n**Code Example:**\n```javascript\nif (true) {\n  var a = 1;   // accessible outside the block\n  let b = 2;   // only accessible inside this block\n  const c = 3; // only accessible inside this block, can't reassign\n}\nconsole.log(a); // 1\nconsole.log(b); // ReferenceError\n```\n\n**Best Practice:**\n• Use `const` by default\n• Use `let` when you need to reassign\n• Avoid `var` in modern JavaScript\n\n**Interview Tip:** Be ready to explain closures alongside scope — they're often asked together."
+    },
+    {
+      "id": 10,
+      "category": "Technical - JavaScript",
+      "keywords": ["promise", "async", "await", "callback", "asynchronous", "event loop", "async await"],
+      "question": "What are Promises and async/await in JavaScript?",
+      "answer": "Promises and async/await handle asynchronous operations in JavaScript:\n\n**Callback Hell (The Problem):**\n```javascript\ngetUser(id, (user) => {\n  getOrders(user, (orders) => {\n    getDetails(orders[0], (details) => {\n      // Deeply nested = hard to read/maintain\n    });\n  });\n});\n```\n\n**Promise (The Solution):**\nA Promise represents a value that may be available in the future.\n```javascript\nconst promise = new Promise((resolve, reject) => {\n  const data = fetchData();\n  data ? resolve(data) : reject('Error!');\n});\n\npromise\n  .then(data => console.log(data))\n  .catch(err => console.error(err))\n  .finally(() => console.log('Done'));\n```\n\n**async/await (The Cleaner Syntax):**\n```javascript\nasync function getUserData(id) {\n  try {\n    const user = await getUser(id);\n    const orders = await getOrders(user);\n    return orders;\n  } catch (error) {\n    console.error('Failed:', error);\n  }\n}\n```\n\n**Promise States:**\n• ⏳ Pending → Initial state\n• ✅ Fulfilled → Operation succeeded\n• ❌ Rejected → Operation failed\n\n**Pro Tip:** Use `Promise.all()` for parallel execution, `Promise.allSettled()` when you need all results regardless of failures."
+    },
+    {
+      "id": 11,
+      "category": "Technical - General",
+      "keywords": ["api", "rest", "restful", "rest api", "http methods", "get post put delete", "endpoint"],
+      "question": "What is a REST API?",
+      "answer": "**REST (Representational State Transfer)** is an architectural style for designing networked applications:\n\n**Core Principles:**\n1. **Stateless:** Each request contains all information needed; server doesn't store client state\n2. **Client-Server:** Separation of concerns between frontend and backend\n3. **Uniform Interface:** Consistent URL patterns and HTTP methods\n4. **Resource-Based:** Everything is a resource identified by URLs\n\n**HTTP Methods:**\n| Method | Action | Example |\n|--------|--------|---------|\n| GET | Read | `GET /api/users` |\n| POST | Create | `POST /api/users` |\n| PUT | Full Update | `PUT /api/users/1` |\n| PATCH | Partial Update | `PATCH /api/users/1` |\n| DELETE | Remove | `DELETE /api/users/1` |\n\n**Status Codes:**\n• `200` OK | `201` Created | `204` No Content\n• `400` Bad Request | `401` Unauthorized | `404` Not Found\n• `500` Internal Server Error\n\n**Best Practices:**\n• Use nouns for endpoints (not verbs): `/users` not `/getUsers`\n• Version your API: `/api/v1/users`\n• Use pagination for large datasets\n• Return meaningful error messages\n\n**Interview Tip:** Be ready to design a simple REST API on a whiteboard (e.g., a todo app or blog API)."
+    },
+    {
+      "id": 12,
+      "category": "Situational",
+      "keywords": ["conflict", "disagreement", "team conflict", "difficult coworker", "handle conflict", "resolve conflict"],
+      "question": "How do you handle conflict in a team?",
+      "answer": "Use the **STAR Method** to structure your answer:\n\n**Situation:** \"In my previous project, a teammate and I disagreed on whether to use REST or GraphQL for our new API.\"\n\n**Task:** \"We needed to make a decision quickly as it was blocking the sprint.\"\n\n**Action:**\n1. \"I scheduled a 30-minute meeting to discuss pros and cons objectively.\"\n2. \"I prepared a comparison matrix considering our specific use case — data complexity, team expertise, and client requirements.\"\n3. \"We agreed to prototype both approaches over 2 days and compare performance.\"\n4. \"I made sure to listen actively and acknowledge the valid points my colleague raised.\"\n\n**Result:** \"We chose GraphQL based on the prototype results, which reduced our API calls by 60%. More importantly, my colleague felt heard and we maintained a strong working relationship.\"\n\n**Key Principles:**\n• Focus on the problem, not the person\n• Listen before responding\n• Use data to support decisions\n• Find common ground\n• Escalate only when necessary\n\n**Pro Tip:** Never badmouth previous colleagues or managers."
+    },
+    {
+      "id": 13,
+      "category": "Situational",
+      "keywords": ["where do you see yourself", "5 years", "future", "career goals", "future goals", "five years"],
+      "question": "Where do you see yourself in 5 years?",
+      "answer": "Structure your answer to show ambition aligned with the company:\n\n**Framework:**\n1. **Short-term (1-2 years):** Master the role and technology\n2. **Mid-term (2-3 years):** Take on leadership/technical depth\n3. **Long-term (4-5 years):** Strategic impact\n\n**Strong Answer Example:**\n\"In the next 1-2 years, I see myself becoming deeply proficient in your tech stack and making significant contributions to [specific product/team]. By year 3, I'd like to take on more mentorship responsibilities — helping junior developers grow, just as senior engineers helped me. In 5 years, I envision myself as a technical lead or senior architect, driving technical decisions that impact the product's direction while staying hands-on with code.\"\n\n**What NOT to say:**\n❌ \"I want your job\" (comes across as threatening)\n❌ \"I'll probably start my own company\" (shows you'll leave)\n❌ \"I don't know\" (shows no ambition)\n\n**Pro Tip:** Research the company's growth trajectory and align your answer with their career ladders."
+    },
+    {
+      "id": 14,
+      "category": "Technical - OOP",
+      "keywords": ["interface", "abstract class", "abstract", "interface vs abstract", "abstraction"],
+      "question": "What is the difference between an Interface and an Abstract Class?",
+      "answer": "**Interface vs Abstract Class:**\n\n| Feature | Interface | Abstract Class |\n|---------|-----------|----------------|\n| Purpose | Define a contract | Provide base implementation |\n| Methods | Only abstract (pre-Java 8) | Both abstract & concrete |\n| Variables | Only constants (`static final`) | Any type of variable |\n| Inheritance | Multiple interfaces allowed | Single abstract class only |\n| Constructor | ❌ No constructor | ✅ Can have constructor |\n| Access Modifiers | Public by default | Any access modifier |\n\n**When to Use What:**\n\n• **Interface** — When unrelated classes should follow the same contract\n```java\ninterface Printable { void print(); }\ninterface Loggable { void log(); }\nclass Report implements Printable, Loggable { ... }\n```\n\n• **Abstract Class** — When related classes share common behavior\n```java\nabstract class Vehicle {\n  protected int speed;\n  abstract void start();\n  void stop() { speed = 0; } // shared implementation\n}\nclass Car extends Vehicle { void start() { ... } }\n```\n\n**Simple Rule of Thumb:**\n• \"Can do\" → Interface (e.g., Serializable, Comparable)\n• \"Is a\" → Abstract Class (e.g., Animal → Dog)\n\n**Interview Tip:** In modern Java (8+), interfaces can have default methods, blurring the line."
+    },
+    {
+      "id": 15,
+      "category": "Technical - General",
+      "keywords": ["data structure", "data structures", "array", "linked list", "stack", "queue", "tree", "hash"],
+      "question": "Explain common data structures and when to use them.",
+      "answer": "**Essential Data Structures:**\n\n**1. Array**\n• Fixed/dynamic size, contiguous memory\n• Access: O(1) | Insert/Delete: O(n)\n• Use: When you need fast random access\n\n**2. Linked List**\n• Nodes connected via pointers\n• Access: O(n) | Insert/Delete: O(1) at head\n• Use: Frequent insertions/deletions, implementing stacks/queues\n\n**3. Stack (LIFO)**\n• Push/Pop from top only\n• Use: Undo operations, function call stack, expression evaluation\n\n**4. Queue (FIFO)**\n• Enqueue at rear, Dequeue from front\n• Use: Task scheduling, BFS, print queues\n\n**5. Hash Map / Hash Table**\n• Key-value pairs, uses hash function\n• Average: O(1) for insert/lookup\n• Use: Caching, counting frequencies, indexing\n\n**6. Tree (Binary Search Tree)**\n• Hierarchical structure, each node has ≤ 2 children\n• Balanced BST: O(log n) for search/insert\n• Use: Databases (B-trees), file systems, autocomplete (Trie)\n\n**7. Graph**\n• Nodes (vertices) connected by edges\n• Use: Social networks, routing, recommendations\n\n**Interview Tip:** Know the time/space complexity of each and be ready to choose the right one for a given problem."
+    },
+    {
+      "id": 16,
+      "category": "Technical - JavaScript",
+      "keywords": ["react", "virtual dom", "component", "hooks", "usestate", "useeffect", "react basics"],
+      "question": "What is React and how does it work?",
+      "answer": "**React** is a JavaScript library for building user interfaces:\n\n**Core Concepts:**\n\n**1. Components:** Reusable UI building blocks\n```jsx\nfunction Greeting({ name }) {\n  return <h1>Hello, {name}!</h1>;\n}\n```\n\n**2. JSX:** HTML-like syntax in JavaScript\n```jsx\nconst element = <div className=\"card\">{user.name}</div>;\n```\n\n**3. Virtual DOM:** React creates a lightweight copy of the real DOM\n• When state changes → new Virtual DOM is created\n• React diffs old vs new Virtual DOM (Reconciliation)\n• Only changed elements are updated in the real DOM\n• Result: Faster, more efficient UI updates\n\n**4. Hooks (React 16.8+):**\n```jsx\nfunction Counter() {\n  const [count, setCount] = useState(0);\n  \n  useEffect(() => {\n    document.title = `Count: ${count}`;\n  }, [count]);\n  \n  return <button onClick={() => setCount(count + 1)}>{count}</button>;\n}\n```\n\n**Key Hooks:**\n• `useState` — Manage component state\n• `useEffect` — Side effects (API calls, subscriptions)\n• `useContext` — Share data without prop drilling\n• `useRef` — Access DOM elements directly\n• `useMemo` / `useCallback` — Performance optimization\n\n**Interview Tip:** Understand the component lifecycle and be able to explain how React optimizes rendering."
+    },
+    {
+      "id": 17,
+      "category": "Technical - General",
+      "keywords": ["git", "version control", "github", "branch", "merge", "commit", "pull request"],
+      "question": "Explain Git basics and common commands.",
+      "answer": "**Git** is a distributed version control system:\n\n**Essential Commands:**\n```bash\n# Setup\ngit init                    # Initialize a repo\ngit clone <url>             # Clone a remote repo\n\n# Daily Workflow\ngit status                  # Check what's changed\ngit add .                   # Stage all changes\ngit commit -m \"message\"     # Commit with message\ngit push origin main        # Push to remote\ngit pull origin main        # Pull latest changes\n\n# Branching\ngit branch feature-login    # Create branch\ngit checkout feature-login  # Switch to branch\ngit checkout -b feature-x   # Create + switch\ngit merge feature-login     # Merge branch into current\n\n# Inspection\ngit log --oneline           # View commit history\ngit diff                    # See unstaged changes\ngit stash                   # Temporarily save changes\n```\n\n**Git Workflow (Feature Branch):**\n1. Create feature branch from `main`\n2. Make changes and commit\n3. Push branch and create Pull Request\n4. Code review → Merge → Delete branch\n\n**Key Concepts:**\n• **HEAD:** Pointer to current commit\n• **Merge vs Rebase:** Merge preserves history; Rebase creates linear history\n• **Conflicts:** Occur when same lines modified in different branches\n\n**Interview Tip:** Know the difference between `git merge` and `git rebase`, and when to use each."
+    },
+    {
+      "id": 18,
+      "category": "Behavioral",
+      "keywords": ["project", "challenging project", "difficult project", "describe a project", "tell me about a project", "project experience"],
+      "question": "Tell me about a challenging project you worked on.",
+      "answer": "Use the **STAR Method** for a compelling answer:\n\n**Template:**\n\n**Situation:** \"At [Company], we were tasked with building a [type of system] that needed to handle [scale/challenge]. The existing system had [specific pain points].\"\n\n**Task:** \"I was responsible for [your specific role]. The deadline was [timeframe] and we had [constraints — team size, budget, tech limitations].\"\n\n**Action (focus most time here):**\n1. \"I started by analyzing the requirements and identifying the biggest technical risks.\"\n2. \"I proposed using [technology/approach] because [reasoning].\"\n3. \"I broke the project into phases and set up [CI/CD pipeline / testing strategy / agile process].\"\n4. \"When we hit [specific blocker], I [how you solved it].\"\n\n**Result:**\n• \"The project was delivered [on time / 2 weeks early].\"\n• \"Performance improved by [X%].\"\n• \"The system now serves [N] users daily.\"\n• \"I received [recognition/promotion] for my contribution.\"\n\n**Pro Tips:**\n• Choose a project relevant to the job you're applying for\n• Highlight both technical skills and soft skills (leadership, communication)\n• Be honest about challenges — interviewers appreciate authenticity\n• Quantify results whenever possible"
+    },
+    {
+      "id": 19,
+      "category": "Technical - General",
+      "keywords": ["system design", "scalability", "load balancer", "caching", "microservices", "design", "architecture"],
+      "question": "Explain key system design concepts.",
+      "answer": "**Essential System Design Concepts:**\n\n**1. Load Balancing** ⚖️\nDistributes traffic across multiple servers.\n• Algorithms: Round Robin, Least Connections, IP Hash\n• Tools: Nginx, AWS ELB, HAProxy\n\n**2. Caching** ⚡\nStores frequently accessed data for faster retrieval.\n• Client-side: Browser cache\n• Server-side: Redis, Memcached\n• CDN: CloudFront, Cloudflare\n• Strategy: Cache-aside, Write-through, Write-back\n\n**3. Database Scaling**\n• **Vertical:** Bigger machine (limited)\n• **Horizontal (Sharding):** Split data across machines\n• **Read Replicas:** Separate read/write databases\n\n**4. Microservices vs Monolith**\n• **Monolith:** Single deployable unit — simple but hard to scale\n• **Microservices:** Independent services — scalable but complex\n\n**5. Message Queues** 📬\nAsync communication between services (Kafka, RabbitMQ, SQS).\n• Decouples producers and consumers\n• Handles traffic spikes gracefully\n\n**6. CAP Theorem**\nChoose 2 of 3: Consistency, Availability, Partition Tolerance\n• CP: MongoDB, HBase\n• AP: Cassandra, DynamoDB\n\n**Interview Tip:** Practice designing systems like URL Shortener, Twitter Feed, Chat App, and Rate Limiter."
+    },
+    {
+      "id": 20,
+      "category": "Technical - OOP",
+      "keywords": ["design pattern", "design patterns", "singleton", "factory", "observer", "mvc", "pattern"],
+      "question": "What are common design patterns?",
+      "answer": "**Design Patterns** are reusable solutions to common software design problems:\n\n**Creational Patterns** (Object Creation)\n1. **Singleton:** Only one instance of a class exists\n```javascript\nclass Database {\n  static instance;\n  static getInstance() {\n    if (!Database.instance) Database.instance = new Database();\n    return Database.instance;\n  }\n}\n```\n\n2. **Factory:** Creates objects without specifying exact class\n```javascript\nclass VehicleFactory {\n  create(type) {\n    if (type === 'car') return new Car();\n    if (type === 'truck') return new Truck();\n  }\n}\n```\n\n**Structural Patterns** (Object Composition)\n3. **Adapter:** Makes incompatible interfaces work together\n4. **Decorator:** Adds behavior to objects dynamically\n\n**Behavioral Patterns** (Object Communication)\n5. **Observer:** When one object changes, all dependents are notified\n```javascript\neventEmitter.on('userCreated', sendWelcomeEmail);\neventEmitter.on('userCreated', initializeProfile);\neventEmitter.emit('userCreated', userData);\n```\n\n6. **Strategy:** Defines a family of algorithms, makes them interchangeable\n\n**MVC Pattern:**\n• **Model:** Data and business logic\n• **View:** UI/presentation\n• **Controller:** Handles input, updates model/view\n\n**Interview Tip:** Don't just memorize patterns — explain when and why you'd use each one with a real-world scenario."
+    }
+  ]
+}

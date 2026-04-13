@@ -1,0 +1,3954 @@
+[
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "Which data structure is best suited for implementing a LIFO (Last-In-First-Out) behavior?",
+    "options": [
+      "Queue",
+      "Linked List",
+      "Stack",
+      "Binary Tree"
+    ],
+    "correctAnswer": "Stack"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is the time complexity of searching an element in a balanced Binary Search Tree (BST)?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "correctAnswer": "O(log n)"
+  },
+  {
+    "topic": "DSA",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "Which algorithm is used to find the shortest path from a source node to all other nodes in a weighted graph without negative edges?",
+    "options": [
+      "Prim's Algorithm",
+      "Kruskal's Algorithm",
+      "Dijkstra's Algorithm",
+      "Bellman-Ford Algorithm"
+    ],
+    "correctAnswer": "Dijkstra's Algorithm"
+  },
+  {
+    "topic": "OOPS",
+    "company": "TCS",
+    "difficulty": "easy",
+    "question": "Which principle of OOPS allows a subclass to provide a specific implementation of a method that is already provided by its parent class?",
+    "options": [
+      "Encapsulation",
+      "Method Overriding",
+      "Abstraction",
+      "Composition"
+    ],
+    "correctAnswer": "Method Overriding"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "In a relational database, which normal form ensures that there are no partial functional dependencies?",
+    "options": [
+      "1NF",
+      "2NF",
+      "3NF",
+      "BCNF"
+    ],
+    "correctAnswer": "2NF"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "Which CPU scheduling algorithm can lead to the 'Starvation' problem?",
+    "options": [
+      "Round Robin",
+      "First-Come-First-Serve",
+      "Priority Scheduling",
+      "Multilevel Queue"
+    ],
+    "correctAnswer": "Priority Scheduling"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "Which layer of the OSI model is responsible for routing data packets between different networks?",
+    "options": [
+      "Data Link Layer",
+      "Transport Layer",
+      "Network Layer",
+      "Session Layer"
+    ],
+    "correctAnswer": "Network Layer"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is the worst-case time complexity of the QuickSort algorithm?",
+    "options": [
+      "O(n log n)",
+      "O(n)",
+      "O(n²)",
+      "O(log n)"
+    ],
+    "correctAnswer": "O(n²)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "Which property of a transaction ensures that the database remains in a consistent state even if the transaction fails?",
+    "options": [
+      "Atomicity",
+      "Consistency",
+      "Isolation",
+      "Durability"
+    ],
+    "correctAnswer": "Atomicity"
+  },
+  {
+    "topic": "OS",
+    "company": "Infosys",
+    "difficulty": "hard",
+    "question": "What is 'thrashing' in the context of Operating Systems?",
+    "options": [
+      "High CPU utilization",
+      "A situation where the system spends more time swapping pages than executing processes",
+      "A type of deadlock",
+      "Fragmentation of the hard disk"
+    ],
+    "correctAnswer": "A situation where the system spends more time swapping pages than executing processes"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "Which hashing technique avoids collisions by using a second hash function to find an empty slot?",
+    "options": [
+      "Linear Probing",
+      "Quadratic Probing",
+      "Double Hashing",
+      "Chaining"
+    ],
+    "correctAnswer": "Double Hashing"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "What is the space complexity of an adjacency matrix representation of a graph with V vertices?",
+    "options": [
+      "O(V)",
+      "O(E)",
+      "O(V²)",
+      "O(V + E)"
+    ],
+    "correctAnswer": "O(V²)"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "What is the main advantage of using Private Access Modifiers in a class?",
+    "options": [
+      "Performance",
+      "Data Hiding (Encapsulation)",
+      "Faster Execution",
+      "Memory Saving"
+    ],
+    "correctAnswer": "Data Hiding (Encapsulation)"
+  },
+  {
+    "topic": "CN",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "Which protocol is used by the 'Ping' command to check network connectivity?",
+    "options": [
+      "TCP",
+      "UDP",
+      "ICMP",
+      "HTTP"
+    ],
+    "correctAnswer": "ICMP"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "Which SQL keyword is used to retrieve unique records from a table?",
+    "options": [
+      "UNIQUE",
+      "DISTINCT",
+      "ORDER BY",
+      "GROUP BY"
+    ],
+    "correctAnswer": "DISTINCT"
+  },
+  {
+    "topic": "OS",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "In virtual memory management, which algorithm replaces the page that has not been used for the longest period of time?",
+    "options": [
+      "FIFO",
+      "Optimal Page Replacement",
+      "LRU (Least Recently Used)",
+      "LFU (Least Frequently Used)"
+    ],
+    "correctAnswer": "LRU (Least Recently Used)"
+  },
+  {
+    "topic": "DSA",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "What is the time complexity to find the diameter of a binary tree in a naive recursive approach?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(n²)",
+      "O(2^n)"
+    ],
+    "correctAnswer": "O(n²)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Infosys",
+    "difficulty": "hard",
+    "question": "A table in 3NF is also in BCNF if every __________ is a superkey.",
+    "options": [
+      "Candidate Key",
+      "Primary Key",
+      "Determinant",
+      "Foreign Key"
+    ],
+    "correctAnswer": "Determinant"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "Which of the following describes the 'Slow Start' phase in TCP Congestion Control?",
+    "options": [
+      "The window size increases linearly",
+      "The window size doubles every RTT",
+      "The window size is halved",
+      "The connection is terminated"
+    ],
+    "correctAnswer": "The window size doubles every RTT"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What happens if a base class has a virtual destructor in C++?",
+    "options": [
+      "It prevents memory leaks when deleting a derived object through a base pointer",
+      "It makes the class abstract",
+      "It disables inheritance",
+      "It increases execution speed"
+    ],
+    "correctAnswer": "It prevents memory leaks when deleting a derived object through a base pointer"
+  },
+  {
+    "topic": "DSA",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "Given a sorted array of 1024 elements, what is the maximum number of comparisons for a Binary Search?",
+    "options": [
+      "512",
+      "1024",
+      "10",
+      "11"
+    ],
+    "correctAnswer": "10"
+  },
+  {
+    "topic": "DBMS",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "Which type of Join returns only the records that have matching values in both tables?",
+    "options": [
+      "Left Join",
+      "Right Join",
+      "Inner Join",
+      "Full Outer Join"
+    ],
+    "correctAnswer": "Inner Join"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "What is a 'Kernel' in an Operating System?",
+    "options": [
+      "The UI part of the OS",
+      "The core component that manages hardware and system resources",
+      "A type of application software",
+      "The file system structure"
+    ],
+    "correctAnswer": "The core component that manages hardware and system resources"
+  },
+  {
+    "topic": "CN",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "What is the size of an IPv6 address?",
+    "options": [
+      "32 bits",
+      "64 bits",
+      "128 bits",
+      "256 bits"
+    ],
+    "correctAnswer": "128 bits"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "Which of these is used to refer to the current instance of a class in Java/C#?",
+    "options": [
+      "static",
+      "this",
+      "super",
+      "final"
+    ],
+    "correctAnswer": "this"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "Which traversal of a Binary Search Tree produces elements in sorted order?",
+    "options": [
+      "Pre-order",
+      "In-order",
+      "Post-order",
+      "Level-order"
+    ],
+    "correctAnswer": "In-order"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "Which command is used to add a new column to an existing table in SQL?",
+    "options": [
+      "UPDATE TABLE",
+      "MODIFY TABLE",
+      "ALTER TABLE",
+      "ADD TABLE"
+    ],
+    "correctAnswer": "ALTER TABLE"
+  },
+  {
+    "topic": "OS",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is 'Belady's Anomaly' in page replacement algorithms?",
+    "options": [
+      "Decrease in page faults with more frames",
+      "Increase in page faults with more frames",
+      "Constant page faults regardless of frames",
+      "Zero page faults in FIFO"
+    ],
+    "correctAnswer": "Increase in page faults with more frames"
+  },
+  {
+    "topic": "CN",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "Which protocol uses the port 443 by default?",
+    "options": [
+      "HTTP",
+      "SSH",
+      "HTTPS",
+      "FTP"
+    ],
+    "correctAnswer": "HTTPS"
+  },
+  {
+    "topic": "OOPS",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is the meaning of 'Abstraction' in OOPS?",
+    "options": [
+      "Protecting variables from outside access",
+      "Showing only essential features while hiding internal details",
+      "Reusing code through inheritance",
+      "Handling multiple forms of data"
+    ],
+    "correctAnswer": "Showing only essential features while hiding internal details"
+  },
+  {
+    "topic": "DSA",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "What is the time complexity of pushing an element onto a stack?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "correctAnswer": "O(1)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "What is a 'Primary Key'?",
+    "options": [
+      "A key that allows null values",
+      "A unique identifier for each record in a table",
+      "A key used for linking two tables",
+      "The first column in any table"
+    ],
+    "correctAnswer": "A unique identifier for each record in a table"
+  },
+  {
+    "topic": "OS",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is a 'Deadlock'?",
+    "options": [
+      "A fast way of executing code",
+      "A state where two or more processes are waiting indefinitely for resources held by each other",
+      "Termination of a process",
+      "Memory overflow"
+    ],
+    "correctAnswer": "A state where two or more processes are waiting indefinitely for resources held by each other"
+  },
+  {
+    "topic": "CN",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "Which device is used to connect multiple computers in a local area network (LAN)?",
+    "options": [
+      "Router",
+      "Switch",
+      "Modem",
+      "Repeater"
+    ],
+    "correctAnswer": "Switch"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "In a Min-Heap, what is the location of the minimum element?",
+    "options": [
+      "Leaf node",
+      "Middle node",
+      "Root node",
+      "Anywhere in the left subtree"
+    ],
+    "correctAnswer": "Root node"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "Which clause is used in SQL to filter results after an aggregation?",
+    "options": [
+      "WHERE",
+      "HAVING",
+      "GROUP BY",
+      "FILTER"
+    ],
+    "correctAnswer": "HAVING"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "In Java, can an interface extend another interface?",
+    "options": [
+      "No",
+      "Yes",
+      "Only if methods are shared",
+      "Only in Java 8+"
+    ],
+    "correctAnswer": "Yes"
+  },
+  {
+    "topic": "OS",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "What is the term for moving a process from main memory to disk to free up space?",
+    "options": [
+      "Swapping",
+      "Paging",
+      "Segmentation",
+      "Caching"
+    ],
+    "correctAnswer": "Swapping"
+  },
+  {
+    "topic": "CN",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "Which algorithm is used in Link State Routing protocol?",
+    "options": [
+      "Bellman-Ford",
+      "Distance Vector",
+      "Dijkstra's Algorithm",
+      "Flooding"
+    ],
+    "correctAnswer": "Dijkstra's Algorithm"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "Which data structure is used for Breadth-First Search (BFS)?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Priority Queue",
+      "Hash Table"
+    ],
+    "correctAnswer": "Queue"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "What does the 'R' in RDBMS stands for?",
+    "options": [
+      "Resource",
+      "Remote",
+      "Relational",
+      "Rapid"
+    ],
+    "correctAnswer": "Relational"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "Which hardware component is essential for supporting Virtual Memory?",
+    "options": [
+      "CPU Cache",
+      "Memory Management Unit (MMU)",
+      "DMA Controller",
+      "Graphics Card"
+    ],
+    "correctAnswer": "Memory Management Unit (MMU)"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is the role of DHCP protocol?",
+    "options": [
+      "Transfers files",
+      "Resolves domain names",
+      "Assigns IP addresses dynamically to devices",
+      "Ensures secure browsing"
+    ],
+    "correctAnswer": "Assigns IP addresses dynamically to devices"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Infosys",
+    "difficulty": "hard",
+    "question": "What is a 'Shallow Copy'?",
+    "options": [
+      "Copies only reference/address of objects",
+      "Copies actual values into new objects recursive",
+      "Deletes original object",
+      "Fast code cloning"
+    ],
+    "correctAnswer": "Copies only reference/address of objects"
+  },
+  {
+    "topic": "DSA",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "Which data structure is required to implement a recursion efficiently?",
+    "options": [
+      "Queue",
+      "Tree",
+      "Stack",
+      "Linked List"
+    ],
+    "correctAnswer": "Stack"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is the main purpose of an Index in a database?",
+    "options": [
+      "Data Integrity",
+      "Faster Data Retrieval",
+      "Data Encryption",
+      "Storage Compression"
+    ],
+    "correctAnswer": "Faster Data Retrieval"
+  },
+  {
+    "topic": "OS",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "Which scheduling algorithm is used for time-sharing systems?",
+    "options": [
+      "SJF",
+      "FCFS",
+      "Round Robin",
+      "Priority"
+    ],
+    "correctAnswer": "Round Robin"
+  },
+  {
+    "topic": "CN",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "What is a MAC address used for?",
+    "options": [
+      "Identifying a device on the internet",
+      "Identifying a device on a local network",
+      "Securing a router",
+      "Compressing data"
+    ],
+    "correctAnswer": "Identifying a device on a local network"
+  },
+  {
+    "topic": "OOPS",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "What is 'Multiple Inheritance'?",
+    "options": [
+      "One class inheriting from one parent",
+      "One class inheriting from multiple parents",
+      "One parent having multiple children",
+      "Two classes having same methods"
+    ],
+    "correctAnswer": "One class inheriting from multiple parents"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "Which traversal is used for a Depth-First Search (DFS)?",
+    "options": [
+      "Level Order",
+      "Queue traversal",
+      "Stack or Recursion",
+      "Binary Search"
+    ],
+    "correctAnswer": "Stack or Recursion"
+  },
+  {
+    "topic": "DBMS",
+    "company": "TCS",
+    "difficulty": "easy",
+    "question": "What is 'Normalization'?",
+    "options": [
+      "Increasing storage size",
+      "Organizing data to reduce redundancy",
+      "Deleting old records",
+      "Encrypting database"
+    ],
+    "correctAnswer": "Organizing data to reduce redundancy"
+  },
+  {
+    "topic": "OS",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is a 'System Call'?",
+    "options": [
+      "A call to a different computer",
+      "A programmed request for a service from the OS kernel",
+      "An error message from OS",
+      "A hardware interrupt"
+    ],
+    "correctAnswer": "A programmed request for a service from the OS kernel"
+  },
+  {
+    "topic": "CN",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What is 'Subnetting'?",
+    "options": [
+      "Connecting two networks",
+      "Dividing a larger network into smaller subnetworks",
+      "Increasing bandwidth",
+      "Updating IP version"
+    ],
+    "correctAnswer": "Dividing a larger network into smaller subnetworks"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What does 'Final' keyword do in Java for a class?",
+    "options": [
+      "Prevents instantiation",
+      "Prevents inheritance",
+      "Prevents deletion",
+      "Makes the class static"
+    ],
+    "correctAnswer": "Prevents inheritance"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is the time complexity of the Floyd-Warshall algorithm?",
+    "options": [
+      "O(V²)",
+      "O(V³)",
+      "O(E log V)",
+      "O(V + E)"
+    ],
+    "correctAnswer": "O(V³)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "Which lock level provides the high concurrency in a database?",
+    "options": [
+      "Database lock",
+      "Table lock",
+      "Page lock",
+      "Row lock"
+    ],
+    "correctAnswer": "Row lock"
+  },
+  {
+    "topic": "OS",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "What is 'Context Switching'?",
+    "options": [
+      "Changing user profile",
+      "Saving state of an active process to resume it later",
+      "Deleting a thread",
+      "Moving files between folders"
+    ],
+    "correctAnswer": "Saving state of an active process to resume it later"
+  },
+  {
+    "topic": "CN",
+    "company": "TCS",
+    "difficulty": "easy",
+    "question": "What is the default port for SSH?",
+    "options": [
+      "80",
+      "443",
+      "22",
+      "21"
+    ],
+    "correctAnswer": "22"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is 'Runtime Polymorphism' achieved by?",
+    "options": [
+      "Method Overloading",
+      "Operator Overloading",
+      "Method Overriding",
+      "Dynamic Typing"
+    ],
+    "correctAnswer": "Method Overriding"
+  },
+  {
+    "topic": "DSA",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "Which tree data structure is strictly balanced to maintain O(log n) performance for all operations?",
+    "options": [
+      "Binary Tree",
+      "AVL Tree",
+      "B-Tree",
+      "Huffman Tree"
+    ],
+    "correctAnswer": "AVL Tree"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is a 'Foreign Key' used for?",
+    "options": [
+      "Uniqueness",
+      "Encryption",
+      "Referential Integrity between tables",
+      "Faster Sorting"
+    ],
+    "correctAnswer": "Referential Integrity between tables"
+  },
+  {
+    "topic": "OS",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "In Banker's Algorithm, what is it primarily used to prevent?",
+    "options": [
+      "Memory Leak",
+      "Starvation",
+      "Deadlock",
+      "Context Switching"
+    ],
+    "correctAnswer": "Deadlock"
+  },
+  {
+    "topic": "CN",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is the function of the ARP protocol?",
+    "options": [
+      "Resolves IP to MAC address",
+      "Resolves Hostname to IP",
+      "Transfers Email",
+      "Routing between networks"
+    ],
+    "correctAnswer": "Resolves IP to MAC address"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What is an 'Abstract Class'?",
+    "options": [
+      "A class with no methods",
+      "A class that cannot be instantiated and may contain abstract methods",
+      "A class with all private members",
+      "A hidden class"
+    ],
+    "correctAnswer": "A class that cannot be instantiated and may contain abstract methods"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "Which of these sorting algorithms has a best-case time complexity of O(n)?",
+    "options": [
+      "QuickSort",
+      "MergeSort",
+      "SelectionSort",
+      "InsertionSort"
+    ],
+    "correctAnswer": "InsertionSort"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "What does the 'A' in CRUD stand for?",
+    "options": [
+      "Add",
+      "Audit",
+      "Approve",
+      "Attach"
+    ],
+    "correctAnswer": "Add"
+  },
+  {
+    "topic": "OS",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is 'Demand Paging'?",
+    "options": [
+      "Loading all pages of a process into RAM at start",
+      "Loading a page into memory only when it is requested",
+      "Deleting unused pages",
+      "Sorting pages by size"
+    ],
+    "correctAnswer": "Loading a page into memory only when it is requested"
+  },
+  {
+    "topic": "CN",
+    "company": "Infosys",
+    "difficulty": "hard",
+    "question": "What is the difference between TCP and UDP?",
+    "options": [
+      "TCP is faster",
+      "UDP is connection-oriented",
+      "TCP provides reliable delivery while UDP does not",
+      "UDP uses larger headers"
+    ],
+    "correctAnswer": "TCP provides reliable delivery while UDP does not"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is 'Encapsulation'?",
+    "options": [
+      "Inheriting classes",
+      "Bundling data and methods together into a single unit (class)",
+      "Dynamic memory allocation",
+      "Resolving methods at runtime"
+    ],
+    "correctAnswer": "Bundling data and methods together into a single unit (class)"
+  },
+  {
+    "topic": "DSA",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is the time complexity of searching in a Hash Table (average case)?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "correctAnswer": "O(1)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What is 'Database Sharding'?",
+    "options": [
+      "Deleting old records",
+      "Splitting a database into smaller, faster pieces across different servers",
+      "Encrypting database headers",
+      "Creating data backups"
+    ],
+    "correctAnswer": "Splitting a database into smaller, faster pieces across different servers"
+  },
+  {
+    "topic": "OS",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What is a 'Zombie Process'?",
+    "options": [
+      "A process that never starts",
+      "A process that has finished execution but still has an entry in the process table",
+      "A process that uses too much memory",
+      "A system error"
+    ],
+    "correctAnswer": "A process that has finished execution but still has an entry in the process table"
+  },
+  {
+    "topic": "CN",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "Which protocol is primarily used for transferring files between a client and a server?",
+    "options": [
+      "SMTP",
+      "FTP",
+      "DNS",
+      "TELNET"
+    ],
+    "correctAnswer": "FTP"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "What is a 'Constructor' in OOPS?",
+    "options": [
+      "A method used for deleting objects",
+      "A special method used to initialize an object at creation",
+      "A tool for building UI",
+      "A type of class header"
+    ],
+    "correctAnswer": "A special method used to initialize an object at creation"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is the time complexity of building a heap from an array of N elements?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(n log n)",
+      "O(n²)"
+    ],
+    "correctAnswer": "O(n)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "Which SQL command is used to delete records from a table?",
+    "options": [
+      "REMOVE",
+      "DROP",
+      "DELETE",
+      "TRUNCATE"
+    ],
+    "correctAnswer": "DELETE"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is the 'Working Set' of a process?",
+    "options": [
+      "Number of lines of code",
+      "Collection of pages in main memory recently used by the process",
+      "The total RAM used",
+      "Process priority level"
+    ],
+    "correctAnswer": "Collection of pages in main memory recently used by the process"
+  },
+  {
+    "topic": "CN",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is 'Latency' in computer networking?",
+    "options": [
+      "The speed of data transfer",
+      "The amount of data transfer",
+      "The delay in the transmission of data",
+      "The reliability of data"
+    ],
+    "correctAnswer": "The delay in the transmission of data"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What is 'Duck Typing'?",
+    "options": [
+      "Static typing in birds",
+      "A concept in dynamic languages where an object's suitability is determined by the presence of certain methods/properties",
+      "Hardcoding objects",
+      "A type of class inheritance"
+    ],
+    "correctAnswer": "A concept in dynamic languages where an object's suitability is determined by the presence of certain methods/properties"
+  },
+  {
+    "topic": "DSA",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "Which data structure is better for implementing a dictionary?",
+    "options": [
+      "Linked List",
+      "Array",
+      "Hash Map",
+      "Stack"
+    ],
+    "correctAnswer": "Hash Map"
+  },
+  {
+    "topic": "DBMS",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is an 'Aggregate Function' in SQL?",
+    "options": [
+      "A function that creates tables",
+      "A function that performs calculation on multiple rows and returns a single value",
+      "An encrypted query",
+      "A trigger"
+    ],
+    "correctAnswer": "A function that performs calculation on multiple rows and returns a single value"
+  },
+  {
+    "topic": "OS",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "What is 'BIOS' short for?",
+    "options": [
+      "Basic Input Output System",
+      "Binary Input Output System",
+      "Basic Internal Operating System",
+      "Built In Operating Software"
+    ],
+    "correctAnswer": "Basic Input Output System"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is 'BGP' (Border Gateway Protocol) used for?",
+    "options": [
+      "Internal network routing",
+      "Routing between different autonomous systems on the internet",
+      "Resolving DNS",
+      "Mail transfer"
+    ],
+    "correctAnswer": "Routing between different autonomous systems on the internet"
+  },
+  {
+    "topic": "OOPS",
+    "company": "TCS",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a member of a class in Java?",
+    "options": [
+      "Variable",
+      "Method",
+      "Interface",
+      "Block"
+    ],
+    "correctAnswer": "Interface"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is the time complexity of the Knuth-Morris-Pratt (KMP) string matching algorithm?",
+    "options": [
+      "O(m+n)",
+      "O(m*n)",
+      "O(n log n)",
+      "O(n²)"
+    ],
+    "correctAnswer": "O(m+n)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "Which data model uses a tree-like structure to represent data?",
+    "options": [
+      "Relational Model",
+      "Network Model",
+      "Hierarchical Model",
+      "Object-Oriented Model"
+    ],
+    "correctAnswer": "Hierarchical Model"
+  },
+  {
+    "topic": "OS",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "What is 'Internal Fragmentation'?",
+    "options": [
+      "Memory outside partitions is unused",
+      "Fixed-size memory partition is larger than the requested size",
+      "Disk error",
+      "CPU overheating"
+    ],
+    "correctAnswer": "Fixed-size memory partition is larger than the requested size"
+  },
+  {
+    "topic": "CN",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "What is the port number for DNS?",
+    "options": [
+      "25",
+      "53",
+      "110",
+      "143"
+    ],
+    "correctAnswer": "53"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is the 'Liskov Substitution Principle' in OOPS?",
+    "options": [
+      "Subtypes must be substitutable for their base types",
+      "Classes should be open for extension",
+      "Interfaces should be small",
+      "Dependencies should be inverted"
+    ],
+    "correctAnswer": "Subtypes must be substitutable for their base types"
+  },
+  {
+    "topic": "DSA",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "In a singly linked list, what is the time complexity to delete a node at the end (without tail pointer)?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n²)"
+    ],
+    "correctAnswer": "O(n)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "Which of the following is true about a B+ tree compared to a B-tree?",
+    "options": [
+      "Data is stored in internal nodes",
+      "All data is stored in leaf nodes",
+      "It has fewer branches",
+      "Deletion is faster in B-tree"
+    ],
+    "correctAnswer": "All data is stored in leaf nodes"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "What is the purpose of an 'Interrupt' in OS?",
+    "options": [
+      "To stop the computer",
+      "To signal an event requiring immediate attention to the CPU",
+      "To increase RAM speed",
+      "To delete processes"
+    ],
+    "correctAnswer": "To signal an event requiring immediate attention to the CPU"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is a 'Firewall'?",
+    "options": [
+      "A heat protectant for servers",
+      "A security system that controls incoming and outgoing network traffic",
+      "A type of router",
+      "A protocol for fast browsing"
+    ],
+    "correctAnswer": "A security system that controls incoming and outgoing network traffic"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is 'Composition' over inheritance?",
+    "options": [
+      "Mixing multiple parents",
+      "Designing types by what they 'do' rather than what they 'are'",
+      "Using instance variables that are referenced to other objects",
+      "Hiding methods"
+    ],
+    "correctAnswer": "Using instance variables that are referenced to other objects"
+  },
+  {
+    "topic": "DSA",
+    "company": "TCS",
+    "difficulty": "easy",
+    "question": "What is the maximum number of children a binary tree node can have?",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "Unlimited"
+    ],
+    "correctAnswer": "2"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Infosys",
+    "difficulty": "hard",
+    "question": "What is the 'Phantom Read' problem in database transactions?",
+    "options": [
+      "Reading old data",
+      "Reading uncommitted data",
+      "A transaction re-reading data and finding fresh rows added by another committed transaction",
+      "Deleting a row twice"
+    ],
+    "correctAnswer": "A transaction re-reading data and finding fresh rows added by another committed transaction"
+  },
+  {
+    "topic": "OS",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "Which of these is an example of an Atomic memory operation?",
+    "options": [
+      "i++",
+      "Compare-and-Swap",
+      "Array sorting",
+      "Print statement"
+    ],
+    "correctAnswer": "Compare-and-Swap"
+  },
+  {
+    "topic": "CN",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "What is 'Bandwidth'?",
+    "options": [
+      "The width of a network cable",
+      "The maximum rate of data transfer across a network path",
+      "The reliability score",
+      "A type of modem"
+    ],
+    "correctAnswer": "The maximum rate of data transfer across a network path"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "In C++, what is a 'Friend Function'?",
+    "options": [
+      "A function that belongs to no class",
+      "A function granted access to private and protected members of another class",
+      "A public method",
+      "A inherited method"
+    ],
+    "correctAnswer": "A function granted access to private and protected members of another class"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "In a Circular Linked List, how do you determine if you have traversed the entire list?",
+    "options": [
+      "Compare the current node's pointer with NULL",
+      "Compare the current node's pointer with the head node",
+      "Keep a counter",
+      "Circular lists cannot be fully traversed"
+    ],
+    "correctAnswer": "Compare the current node's pointer with the head node"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What is the main advantage of using Write-Ahead Logging (WAL) in database systems?",
+    "options": [
+      "Faster reads",
+      "Immediate persistence of all data",
+      "Atomicity and Durability during crashes",
+      "Reducing disk space usage"
+    ],
+    "correctAnswer": "Atomicity and Durability during crashes"
+  },
+  {
+    "topic": "OS",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "Which of the following is NOT a necessary condition for a deadlock?",
+    "options": [
+      "Mutual Exclusion",
+      "Hold and Wait",
+      "No Preemption",
+      "Starvation"
+    ],
+    "correctAnswer": "Starvation"
+  },
+  {
+    "topic": "CN",
+    "company": "TCS",
+    "difficulty": "easy",
+    "question": "What is the function of the Transport Layer in the OSI model?",
+    "options": [
+      "Routing packets",
+      "Error-free end-to-end delivery of data",
+      "Physical connection",
+      "Presentation formatting"
+    ],
+    "correctAnswer": "Error-free end-to-end delivery of data"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is 'Method Overloading' in OOPS?",
+    "options": [
+      "Providing different implementations for the same method name with different parameters",
+      "Changing the return type of a method in a subclass",
+      "Using 'super' keyword",
+      "Encapsulating private members"
+    ],
+    "correctAnswer": "Providing different implementations for the same method name with different parameters"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "Which balancing logic is used in Red-Black Trees?",
+    "options": [
+      "Height difference <= 1",
+      "Colors (Red/Black) and rotation rules",
+      "Size balancing",
+      "Depth balancing"
+    ],
+    "correctAnswer": "Colors (Red/Black) and rotation rules"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "Which SQL statement is used to update data in a database?",
+    "options": [
+      "SAVE",
+      "UPDATE",
+      "MODIFY",
+      "ALTER"
+    ],
+    "correctAnswer": "UPDATE"
+  },
+  {
+    "topic": "OS",
+    "company": "Infosys",
+    "difficulty": "hard",
+    "question": "What does 'SPOOLING' stand for in Operating Systems?",
+    "options": [
+      "Sequential Peripheral Operation On Line",
+      "Simultaneous Peripheral Operation On Line",
+      "Simple Process Output Line",
+      "Secure Programming On Line"
+    ],
+    "correctAnswer": "Simultaneous Peripheral Operation On Line"
+  },
+  {
+    "topic": "CN",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is the primary difference between a Hub and a Switch?",
+    "options": [
+      "Hubs are faster",
+      "Hubs broadcast data to all ports; Switches send data specifically to the destination port",
+      "Switches are cheaper",
+      "Hubs use larger cables"
+    ],
+    "correctAnswer": "Hubs broadcast data to all ports; Switches send data specifically to the destination port"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "In Java, can a constructor be static?",
+    "options": [
+      "Yes",
+      "No",
+      "Only in non-public classes",
+      "Only if it initializes static variables"
+    ],
+    "correctAnswer": "No"
+  },
+  {
+    "topic": "DSA",
+    "company": "TCS",
+    "difficulty": "easy",
+    "question": "What is the maximum number of elements in a binary tree of height 'h' (with root at height 0)?",
+    "options": [
+      "2^h",
+      "2^(h+1) - 1",
+      "2h",
+      "h^2"
+    ],
+    "correctAnswer": "2^(h+1) - 1"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "Which level of data abstraction describes 'how' the data is actually stored in storage?",
+    "options": [
+      "External Level",
+      "Conceptual Level",
+      "Physical Level",
+      "View Level"
+    ],
+    "correctAnswer": "Physical Level"
+  },
+  {
+    "topic": "OS",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "What does RAM stand for?",
+    "options": [
+      "Read Access Memory",
+      "Random Access Memory",
+      "Run Access Memory",
+      "Rapid Access Memory"
+    ],
+    "correctAnswer": "Random Access Memory"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is 'Anycast' routing?",
+    "options": [
+      "One-to-all communication",
+      "One-to-nearest communication",
+      "One-to-one communication",
+      "One-to-many communication"
+    ],
+    "correctAnswer": "One-to-nearest communication"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "Which keyword is used to prevent a variable from being modified in Java?",
+    "options": [
+      "static",
+      "const",
+      "final",
+      "private"
+    ],
+    "correctAnswer": "final"
+  },
+  {
+    "topic": "DSA",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "Which of the following is an stable sorting algorithm?",
+    "options": [
+      "QuickSort",
+      "HeapSort",
+      "MergeSort",
+      "SelectionSort"
+    ],
+    "correctAnswer": "MergeSort"
+  },
+  {
+    "topic": "DBMS",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "Which of the following describes a 'Weak Entity' in ER modeling?",
+    "options": [
+      "An entity with no primary key",
+      "An entity that cannot exist without a related strong entity",
+      "An entity with nullable fields",
+      "A hidden table"
+    ],
+    "correctAnswer": "An entity that cannot exist without a related strong entity"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is 'Priority Inversion'?",
+    "options": [
+      "Ending a process",
+      "A low priority task holding a resource needed by a high priority task",
+      "Changing CPU clock speed",
+      "Increasing memory size"
+    ],
+    "correctAnswer": "A low priority task holding a resource needed by a high priority task"
+  },
+  {
+    "topic": "CN",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "What is 'Port Forwarding' used for?",
+    "options": [
+      "Increasing internet speed",
+      "Redirecting a communication request from one address and port number combination to another",
+      "Hiding the router",
+      "Cleaning the cache"
+    ],
+    "correctAnswer": "Redirecting a communication request from one address and port number combination to another"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is 'Multiple Dispatch' in OOPS?",
+    "options": [
+      "Running multiple threads",
+      "Choosing which method to call based on the runtime types of more than one of its arguments",
+      "Calling same method twice",
+      "Static typing"
+    ],
+    "correctAnswer": "Choosing which method to call based on the runtime types of more than one of its arguments"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "What is the time complexity of removing an element from the beginning of an array?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "correctAnswer": "O(n)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is an 'Equijoin'?",
+    "options": [
+      "A join using any comparator",
+      "A join that uses only equality comparison in the join-condition",
+      "A join on the same table",
+      "A full outer join"
+    ],
+    "correctAnswer": "A join that uses only equality comparison in the join-condition"
+  },
+  {
+    "topic": "OS",
+    "company": "TCS",
+    "difficulty": "easy",
+    "question": "What is 'Multiprogramming'?",
+    "options": [
+      "Running one program at a time",
+      "Keeping multiple programs in main memory and alternating between them",
+      "Using multiple CPUs",
+      "Programming in different languages"
+    ],
+    "correctAnswer": "Keeping multiple programs in main memory and alternating between them"
+  },
+  {
+    "topic": "CN",
+    "company": "Infosys",
+    "difficulty": "hard",
+    "question": "What is 'Jitter' in computer networking?",
+    "options": [
+      "Loss of signal",
+      "Variation in packet arrival time delay",
+      "High bandwidth",
+      "Security breach"
+    ],
+    "correctAnswer": "Variation in packet arrival time delay"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "What is 'Dynamic Binding'?",
+    "options": [
+      "Binding at compile time",
+      "Binding at runtime",
+      "Binding to memory",
+      "Binding to hard drive"
+    ],
+    "correctAnswer": "Binding at runtime"
+  },
+  {
+    "topic": "DSA",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "Which data structure is best for solving the 'Longest Increasing Subsequence' problem optimally?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Dynamic Programming with Binary Search",
+      "Linked List"
+    ],
+    "correctAnswer": "Dynamic Programming with Binary Search"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "Which of these is NOT a DDL command?",
+    "options": [
+      "CREATE",
+      "ALTER",
+      "DROP",
+      "SELECT"
+    ],
+    "correctAnswer": "SELECT"
+  },
+  {
+    "topic": "OS",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is 'Segmentation' in memory management?",
+    "options": [
+      "Dividing memory into equal-sized pages",
+      "Dividing memory into variable-sized segments based on program structure",
+      "Deleting files",
+      "CPU overclocking"
+    ],
+    "correctAnswer": "Dividing memory into variable-sized segments based on program structure"
+  },
+  {
+    "topic": "CN",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "What port does HTTPS use?",
+    "options": [
+      "80",
+      "443",
+      "22",
+      "21"
+    ],
+    "correctAnswer": "443"
+  },
+  {
+    "topic": "OOPS",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "What is the 'Diamond Problem' in C++?",
+    "options": [
+      "A memory leak",
+      "An ambiguity that arises when two classes inherit from the same base class, and a third class inherits from both",
+      "A type of sorting",
+      "A hardware error"
+    ],
+    "correctAnswer": "An ambiguity that arises when two classes inherit from the same base class, and a third class inherits from both"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is the time complexity of adding an element into a Heap?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "correctAnswer": "O(log n)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "What is 'Referential Integrity'?",
+    "options": [
+      "Data is encrypted",
+      "A foreign key value must match an existing primary key value in another table",
+      "Data is consistent across tables",
+      "Data is compressed"
+    ],
+    "correctAnswer": "A foreign key value match an existing primary key value in another table"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is 'Paging Anomaly'?",
+    "options": [
+      "Belady's Anomaly",
+      "A type of deadlock",
+      "High disk access",
+      "Slow booting"
+    ],
+    "correctAnswer": "Belady's Anomaly"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "Which protocol is used for sending emails (Push protocol)?",
+    "options": [
+      "POP3",
+      "IMAP",
+      "SMTP",
+      "HTTP"
+    ],
+    "correctAnswer": "SMTP"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "What is the purpose of the 'Super' keyword in Java?",
+    "options": [
+      "To call the parent class's constructor or methods",
+      "To make a variables static",
+      "To delete an object",
+      "To prevent inheritance"
+    ],
+    "correctAnswer": "To call the parent class's constructor or methods"
+  },
+  {
+    "topic": "DSA",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "Which algorithm finds the Minimum Spanning Tree (MST) of a graph?",
+    "options": [
+      "Dijkstra's",
+      "Flloyd-Warshall",
+      "Prim's",
+      "BFS"
+    ],
+    "correctAnswer": "Prim's"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "What is an 'Entity' in DBMS?",
+    "options": [
+      "A table row",
+      "A real-world object with independent existence",
+      "A database connection",
+      "A type of query"
+    ],
+    "correctAnswer": "A real-world object with independent existence"
+  },
+  {
+    "topic": "OS",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "What is 'Virtual Memory'?",
+    "options": [
+      "High-speed RAM",
+      "The use of the hard disk to simulate additional RAM",
+      "A type of BIOS",
+      "Unused RAM"
+    ],
+    "correctAnswer": "The use of the hard disk to simulate additional RAM"
+  },
+  {
+    "topic": "CN",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "What does LAN stand for?",
+    "options": [
+      "Local Area Network",
+      "Link Area Network",
+      "Large Area Network",
+      "Level Area Network"
+    ],
+    "correctAnswer": "Local Area Network"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is 'RAII' in C++?",
+    "options": [
+      "Resource Acquisition Is Initialization",
+      "Random Access Internal Interface",
+      "Resource Allocation In Inheritance",
+      "Runtime Access In Interfaces"
+    ],
+    "correctAnswer": "Resource Acquisition Is Initialization"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "Which of these is a divide and conquer algorithm?",
+    "options": [
+      "Bubble Sort",
+      "Insertion Sort",
+      "Quick Sort",
+      "Selection Sort"
+    ],
+    "correctAnswer": "Quick Sort"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "Which SQL aggregate function is used to calculate the average of a numeric column?",
+    "options": [
+      "AVG()",
+      "MEAN()",
+      "AVERAGE()",
+      "SUM()/COUNT()"
+    ],
+    "correctAnswer": "AVG()"
+  },
+  {
+    "topic": "OS",
+    "company": "TCS",
+    "difficulty": "easy",
+    "question": "What is a 'Thread'?",
+    "options": [
+      "A full process",
+      "The smallest unit of CPU utilization",
+      "A security protocol",
+      "A type of memory segment"
+    ],
+    "correctAnswer": "The smallest unit of CPU utilization"
+  },
+  {
+    "topic": "CN",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What is 'Multiplexing'?",
+    "options": [
+      "Hacking a network",
+      "Sending multiple signals over a single communication channel",
+      "Encrypting data",
+      "Increasing disk space"
+    ],
+    "correctAnswer": "Sending multiple signals over a single communication channel"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is 'Late Binding'?",
+    "options": [
+      "Compile time binding",
+      "Run time binding",
+      "Direct call",
+      "Memory mapping"
+    ],
+    "correctAnswer": "Run time binding"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is the time complexity to find the median in two sorted arrays of length N optimally?",
+    "options": [
+      "O(N)",
+      "O(log N)",
+      "O(N log N)",
+      "O(1)"
+    ],
+    "correctAnswer": "O(log N)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "TCS",
+    "difficulty": "easy",
+    "question": "What is a 'Tuples' in DBMS?",
+    "options": [
+      "Table column",
+      "Table row",
+      "Primary key",
+      "Audit log"
+    ],
+    "correctAnswer": "Table row"
+  },
+  {
+    "topic": "OS",
+    "company": "Infosys",
+    "difficulty": "hard",
+    "question": "What is 'Peterson’s Solution'?",
+    "options": [
+      "A sorting algorithm",
+      "A concurrent programming algorithm for mutual exclusion",
+      "A hardware fix",
+      "A memory allocation policy"
+    ],
+    "correctAnswer": "A concurrent programming algorithm for mutual exclusion"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is the purpose of 'ICMP' packets?",
+    "options": [
+      "File transfer",
+      "Error reporting and operational information in network",
+      "Email pushing",
+      "Dynamic IP assignment"
+    ],
+    "correctAnswer": "Error reporting and operational information in network"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "Which of these allows multiple methods with same name but different argument lists?",
+    "options": [
+      "Abstraction",
+      "Inheritance",
+      "Overloading",
+      "Overriding"
+    ],
+    "correctAnswer": "Overloading"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is the best case time complexity for a Search in a Binary Search Tree?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "correctAnswer": "O(log n)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is the 'Two-Phase Locking' (2PL) protocol used for?",
+    "options": [
+      "Encryption",
+      "Concurrency control ensuring serializability",
+      "Fast searching",
+      "Data compression"
+    ],
+    "correctAnswer": "Concurrency control ensuring serializability"
+  },
+  {
+    "topic": "OS",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "What is 'Internal Fragmentation'?",
+    "options": [
+      "Free space between processes",
+      "Unused space within a fixed-size memory block allocated to a process",
+      "Disk spin fail",
+      "Network delay"
+    ],
+    "correctAnswer": "Unused space within a fixed-size memory block allocated to a process"
+  },
+  {
+    "topic": "CN",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "Which layer in OSI model converts data into bits for transmission?",
+    "options": [
+      "Data Link Layer",
+      "Physical Layer",
+      "Network Layer",
+      "Application Layer"
+    ],
+    "correctAnswer": "Physical Layer"
+  },
+  {
+    "topic": "OOPS",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is 'Polymorphism'?",
+    "options": [
+      "The ability of an object to take on many forms",
+      "Hiding data",
+      "Copying objects",
+      "Dynamic allocation"
+    ],
+    "correctAnswer": "The ability of an object to take on many forms"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "Which data structure is better suited for implementing a FIFO (First-In-First-Out) behavior?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Tree",
+      "Array"
+    ],
+    "correctAnswer": "Queue"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is 'Normal Form 1 (1NF)'?",
+    "options": [
+      "No partial dependencies",
+      "Eliminating duplicate columns and ensuring atomicity of values",
+      "No transitive dependencies",
+      "Using primary keys"
+    ],
+    "correctAnswer": "Eliminating duplicate columns and ensuring atomicity of values"
+  },
+  {
+    "topic": "OS",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "Which of these is a preemptive scheduling algorithm?",
+    "options": [
+      "FCFS",
+      "SJF (Non-preemptive)",
+      "Shortest Remaining Time First (SRTF)",
+      "Priority (Non-preemptive)"
+    ],
+    "correctAnswer": "Shortest Remaining Time First (SRTF)"
+  },
+  {
+    "topic": "CN",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is 'CSMA/CD'?",
+    "options": [
+      "A routing algorithm",
+      "A collision detection protocol used in Ethernet",
+      "A encryption key",
+      "A type of modem"
+    ],
+    "correctAnswer": "A collision detection protocol used in Ethernet"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "What is a 'Class' in OOPS?",
+    "options": [
+      "A blueprint or template for creating objects",
+      "An instance of an object",
+      "A method",
+      "A variable"
+    ],
+    "correctAnswer": "A blueprint or template for creating objects"
+  },
+  {
+    "topic": "DSA",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is the time complexity to find an element in a Hash Table with Chaining (average case)?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(k)",
+      "O(log n)"
+    ],
+    "correctAnswer": "O(1)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Infosys",
+    "difficulty": "hard",
+    "question": "What is 'ACID' in databases?",
+    "options": [
+      "Access, Control, Integrity, Data",
+      "Atomicity, Consistency, Isolation, Durability",
+      "Action, Commit, Input, Delivery",
+      "Audit, Check, Isolation, Durability"
+    ],
+    "correctAnswer": "Atomicity, Consistency, Isolation, Durability"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "What is 'Bootstrapping'?",
+    "options": [
+      "Installing software",
+      "The process of starting up a computer and loading the OS",
+      "Cleaning the disk",
+      "Creating a thread"
+    ],
+    "correctAnswer": "The process of starting up a computer and loading the OS"
+  },
+  {
+    "topic": "CN",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "Which layer of OSI model provides encryption and decryption?",
+    "options": [
+      "Application Layer",
+      "Presentation Layer",
+      "Session Layer",
+      "Transport Layer"
+    ],
+    "correctAnswer": "Presentation Layer"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is 'Inversion of Control' (IoC)?",
+    "options": [
+      "Changing variable values",
+      "A design principle where the control flow of a program is inverted compared to traditional procedural programming",
+      "Deleting parent classes",
+      "Accessing private data"
+    ],
+    "correctAnswer": "A design principle where the control flow of a program is inverted compared to traditional procedural programming"
+  },
+  {
+    "topic": "DSA",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What is the time complexity of the Heap Sort algorithm?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n²)",
+      "O(log n)"
+    ],
+    "correctAnswer": "O(n log n)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is a 'View' in SQL?",
+    "options": [
+      "A physical table",
+      "A virtual table based on the result-set of an SQL statement",
+      "A database backup",
+      "A dashboard"
+    ],
+    "correctAnswer": "A virtual table based on the result-set of an SQL statement"
+  },
+  {
+    "topic": "OS",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is 'Deadlock Prevention'?",
+    "options": [
+      "Ending all processes",
+      "Ensuring that at least one of the four necessary conditions for deadlock never occurs",
+      "Rebooting the system",
+      "Adding more RAM"
+    ],
+    "correctAnswer": "Ensuring that at least one of the four necessary conditions for deadlock never occurs"
+  },
+  {
+    "topic": "CN",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "What is an 'IP Address'?",
+    "options": [
+      "Internal code for software",
+      "A unique string of characters that identifies each computer using the IP protocol to communicate over a network",
+      "A name for a router",
+      "A security key"
+    ],
+    "correctAnswer": "A unique string of characters that identifies each computer using the IP protocol to communicate over a network"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is 'Interface' in OOPS?",
+    "options": [
+      "A physical screen",
+      "A contract specifying a set of methods that a class must implement",
+      "A inherited class",
+      "A type of variable"
+    ],
+    "correctAnswer": "A contract specifying a set of methods that a class must implement"
+  },
+  {
+    "topic": "DSA",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "What is the time complexity of inserting a node at the head of a Singly Linked List?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "correctAnswer": "O(1)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "Which SQL keyword is used to sort the result-set?",
+    "options": [
+      "SORT BY",
+      "ALIGN",
+      "ORDER BY",
+      "GROUP BY"
+    ],
+    "correctAnswer": "ORDER BY"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is 'Fragmentation' in hard disks?",
+    "options": [
+      "Disk breaking physically",
+      "Storing files in non-contiguous memory locations",
+      "Deleting old files",
+      "Formatting the disk"
+    ],
+    "correctAnswer": "Storing files in non-contiguous memory locations"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "Which of these is a stateful firewall feature?",
+    "options": [
+      "Packet filtering",
+      "Tracking the state of active connections",
+      "IP blocking",
+      "Port closing"
+    ],
+    "correctAnswer": "Tracking the state of active connections"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is 'Duck Typing' in Python?",
+    "options": [
+      "A type of error",
+      "Determining an object's type based on its methods and properties at runtime",
+      "Hardcoding variables",
+      "Static checking"
+    ],
+    "correctAnswer": "Determining an object's type based on its methods and properties at runtime"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "Which sorting algorithm works by repeatedly picking the smallest element and moving it to the sorted part?",
+    "options": [
+      "Bubble Sort",
+      "Insertion Sort",
+      "Selection Sort",
+      "Quick Sort"
+    ],
+    "correctAnswer": "Selection Sort"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is an 'Index Scan'?",
+    "options": [
+      "Scanning entire table",
+      "Using index to quickly find specific rows",
+      "Deleting indices",
+      "Checking database size"
+    ],
+    "correctAnswer": "Using index to quickly find specific rows"
+  },
+  {
+    "topic": "OS",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "What is the 'Dining Philosophers Problem' an illustration of?",
+    "options": [
+      "Sorting issues",
+      "Synchronization and deadlock problems",
+      "Networking delays",
+      "Hardware failures"
+    ],
+    "correctAnswer": "Synchronization and deadlock problems"
+  },
+  {
+    "topic": "CN",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "What is the purpose of a 'Subnet Mask'?",
+    "options": [
+      "To hide the network",
+      "To distinguish between network address and host address of an IP",
+      "To increase speed",
+      "To encrypt traffic"
+    ],
+    "correctAnswer": "To distinguish between network address and host address of an IP"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is 'Cohesion' in software design?",
+    "options": [
+      "Sharing resources",
+      "How closely related the functions within a single module are",
+      "Coupling between modules",
+      "Inheritance depth"
+    ],
+    "correctAnswer": "How closely related the functions within a single module are"
+  },
+  {
+    "topic": "DSA",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What is the time complexity of building a Prefix Tree (Trie)?",
+    "options": [
+      "O(N)",
+      "O(L * N)",
+      "O(log N)",
+      "O(N^2)"
+    ],
+    "correctAnswer": "O(L * N)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "What is 'Database Denormalization'?",
+    "options": [
+      "Increasing redundancy for performance gain",
+      "Eliminating redundancy",
+      "Encrypting data",
+      "Reducing file size"
+    ],
+    "correctAnswer": "Increasing redundancy for performance gain"
+  },
+  {
+    "topic": "OS",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "What is a 'Process Control Block' (PCB)?",
+    "options": [
+      "A hardware chip",
+      "A data structure containing information about a process",
+      "A tool for deleting processes",
+      "A system error log"
+    ],
+    "correctAnswer": "A data structure containing information about a process"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is the 'TCP Three-Way Handshake'?",
+    "options": [
+      "SYN, SYN-ACK, ACK",
+      "CONNECT, DATA, DISCONNECT",
+      "GET, POST, PUT",
+      "HELLO, WAIT, READY"
+    ],
+    "correctAnswer": "SYN, SYN-ACK, ACK"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is 'Coupling' in OOPS?",
+    "options": [
+      "Hiding data",
+      "Degrees of dependency between modules/classes",
+      "Reusing code",
+      "Inheritance speed"
+    ],
+    "correctAnswer": "Degrees of dependency between modules/classes"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "Which of these is a linear data structure?",
+    "options": [
+      "Tree",
+      "Graph",
+      "Linked List",
+      "Heap"
+    ],
+    "correctAnswer": "Linked List"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is a 'Transaction Log'?",
+    "options": [
+      "A list of all users",
+      "A history of all changes made to a database used for recovery",
+      "A encrypted query file",
+      "A dashboard"
+    ],
+    "correctAnswer": "A history of all changes made to a database used for recovery"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "Which memory management scheme allows non-contiguous allocation?",
+    "options": [
+      "Fixed Partitioning",
+      "Paging",
+      "Static Allocation",
+      "Contiguous Allocation"
+    ],
+    "correctAnswer": "Paging"
+  },
+  {
+    "topic": "CN",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "What is 'DNS Poisoning'?",
+    "options": [
+      "Cleaning DNS cache",
+      "Corrupting DNS server's cache with false IP addresses",
+      "Increasing internet speed",
+      "Creating new domains"
+    ],
+    "correctAnswer": "Corrupting DNS server's cache with false IP addresses"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Infosys",
+    "difficulty": "hard",
+    "question": "What is the 'Decorator Pattern'?",
+    "options": [
+      "Hiding modules",
+      "Attaching additional responsibilities to an object dynamically",
+      "Changing class headers",
+      "Inheriting privatized classes"
+    ],
+    "correctAnswer": "Attaching additional responsibilities to an object dynamically"
+  },
+  {
+    "topic": "DSA",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is the time complexity of the Selection Sort algorithm?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n²)",
+      "O(log n)"
+    ],
+    "correctAnswer": "O(n²)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "What is a 'Primary Key' constraint?",
+    "options": [
+      "Allows null values",
+      "Ensures unique identification and NOT NULL values",
+      "Encrypts the column",
+      "Allows duplicate values"
+    ],
+    "correctAnswer": "Ensures unique identification and NOT NULL values"
+  },
+  {
+    "topic": "OS",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "What is 'Belady’s Anomaly' primarily observed in?",
+    "options": [
+      "LRU",
+      "Optimal Replacement",
+      "FIFO",
+      "LFU"
+    ],
+    "correctAnswer": "FIFO"
+  },
+  {
+    "topic": "CN",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What does a 'Proxy Server' do?",
+    "options": [
+      "Increases internet bandwidth",
+      "Acts as an intermediary for requests from clients seeking resources from other servers",
+      "Stores local files",
+      "Encrypts hard drives"
+    ],
+    "correctAnswer": "Acts as an intermediary for requests from clients seeking resources from other servers"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is an 'Inner Class'?",
+    "options": [
+      "A hidden class",
+      "A class defined within another class",
+      "A inherited class",
+      "A private class"
+    ],
+    "correctAnswer": "A class defined within another class"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is the time complexity of the A* search algorithm in the worst case?",
+    "options": [
+      "O(E)",
+      "O(b^d)",
+      "O(V log V)",
+      "O(n^2)"
+    ],
+    "correctAnswer": "O(b^d)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is 'Logical Data Independence'?",
+    "options": [
+      "Ability to change conceptual schema without changing external schema",
+      "Ability to change physical schema without changing conceptual",
+      "Encrypting keys",
+      "Using multiple DBs"
+    ],
+    "correctAnswer": "Ability to change conceptual schema without changing external schema"
+  },
+  {
+    "topic": "OS",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "Which signal is used to terminate a process gracefully in Unix-like systems?",
+    "options": [
+      "SIGKILL",
+      "SIGTERM",
+      "SIGSTOP",
+      "SIGINT"
+    ],
+    "correctAnswer": "SIGTERM"
+  },
+  {
+    "topic": "CN",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "What is the function of an Ethernet cable?",
+    "options": [
+      "Powering the PC",
+      "Physical medium for data transmission in a wired network",
+      "Storing files",
+      "Increasing CPU speed"
+    ],
+    "correctAnswer": "Physical medium for data transmission in a wired network"
+  },
+  {
+    "topic": "OOPS",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is 'Association' in OOPS?",
+    "options": [
+      "Class inheritance",
+      "A relationship between two separate classes established through their objects",
+      "Deleting classes",
+      "Hiding methods"
+    ],
+    "correctAnswer": "A relationship between two separate classes established through their objects"
+  },
+  {
+    "topic": "DSA",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "Which of these is a non-linear data structure?",
+    "options": [
+      "Array",
+      "Linked List",
+      "Stack",
+      "Tree"
+    ],
+    "correctAnswer": "Tree"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is a 'Materialized View'?",
+    "options": [
+      "A view that is recalculated on every query",
+      "A view whose results are physically stored in the database",
+      "A hidden table",
+      "A UI component"
+    ],
+    "correctAnswer": "A view whose results are physically stored in the database"
+  },
+  {
+    "topic": "OS",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is the 'Critical Section' problem?",
+    "options": [
+      "Hard drive failure",
+      "Code that accesses shared resources that must not be concurrently accessed by more than one thread",
+      "CPU thermal limit",
+      "Memory low"
+    ],
+    "correctAnswer": "Code that accesses shared resources that must not be concurrently accessed by more than one thread"
+  },
+  {
+    "topic": "CN",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is 'Throughput'?",
+    "options": [
+      "The rate of successful message delivery over a communication channel",
+      "The total length of cable",
+      "Number of connected users",
+      "Encryption factor"
+    ],
+    "correctAnswer": "The rate of successful message delivery over a communication channel"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Infosys",
+    "difficulty": "hard",
+    "question": "What is 'Type Erasure' in Java Generics?",
+    "options": [
+      "Deleting variables",
+      "Removal of type parameters at compile time to ensure backward compatibility with older Java versions",
+      "Dynamic typing",
+      "Garbage collection"
+    ],
+    "correctAnswer": "Removal of type parameters at compile time to ensure backward compatibility with older Java versions"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is the time complexity of the Kruskal's algorithm?",
+    "options": [
+      "O(V^2)",
+      "O(E log E)",
+      "O(V + E)",
+      "O(E^2)"
+    ],
+    "correctAnswer": "O(E log E)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "In SQL, which operator is used for pattern matching?",
+    "options": [
+      "BETWEEN",
+      "LIKE",
+      "EXISTS",
+      "IN"
+    ],
+    "correctAnswer": "LIKE"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is 'Inverted Page Table'?",
+    "options": [
+      "A table sorted by size",
+      "A page table structure that has one entry for each real page (or frame) of memory",
+      "A disk log",
+      "A corrupted table"
+    ],
+    "correctAnswer": "A page table structure that has one entry for each real page (or frame) of memory"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "What does FTP stand for?",
+    "options": [
+      "File Transfer Protocol",
+      "Format Transfer Protocol",
+      "First Transfer Protocol",
+      "Fast Transfer Protocol"
+    ],
+    "correctAnswer": "File Transfer Protocol"
+  },
+  {
+    "topic": "OOPS",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is the 'Visitor Design Pattern'?",
+    "options": [
+      "Hiding data",
+      "Separating an algorithm from an object structure on which it operates",
+      "Inheriting privatized classes",
+      "A UI tool"
+    ],
+    "correctAnswer": "Separating an algorithm from an object structure on which it operates"
+  },
+  {
+    "topic": "DSA",
+    "company": "Infosys",
+    "difficulty": "hard",
+    "question": "What is a 'Splay Tree'?",
+    "options": [
+      "A strictly balanced BST",
+      "A self-adjusting binary search tree with the additional property that recently accessed elements are quick to access again",
+      "A type of heap",
+      "A graph"
+    ],
+    "correctAnswer": "A self-adjusting binary search tree with the additional property that recently accessed elements are quick to access again"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is 'Multi-version Concurrency Control' (MVCC)?",
+    "options": [
+      "Using multiple DBs",
+      "Method used to provide concurrent access to data without locking by keeping multiple versions of the data",
+      "Deleting old rows",
+      "Fast queries"
+    ],
+    "correctAnswer": "Method used to provide concurrent access to data without locking by keeping multiple versions of the data"
+  },
+  {
+    "topic": "OS",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "Which component of OS is responsible for managing file access permissions?",
+    "options": [
+      "Kernel",
+      "File System",
+      "Registry",
+      "Shell"
+    ],
+    "correctAnswer": "File System"
+  },
+  {
+    "topic": "CN",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is 'BGP Hijacking'?",
+    "options": [
+      "Increasing speed",
+      "Illegitimately taking over groups of IP addresses by corrupting internet routing tables",
+      "Hacking a wifi",
+      "DNS cleaning"
+    ],
+    "correctAnswer": "Illegitimately taking over groups of IP addresses by corrupting internet routing tables"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "What is a 'Destructor' used for?",
+    "options": [
+      "Creating objects",
+      "Deallocating memory and performing cleanup when an object is destroyed",
+      "Adding methods",
+      "Linking classes"
+    ],
+    "correctAnswer": "Deallocating memory and performing cleanup when an object is destroyed"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is the time complexity of the Radix Sort algorithm?",
+    "options": [
+      "O(n log n)",
+      "O(nk)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "correctAnswer": "O(nk)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is 'Checkpointing' in database recovery?",
+    "options": [
+      "Stopping the DB",
+      "A mechanism where all previous logs are removed from the system and stored permanently in the storage disk",
+      "A encryption point",
+      "A security check"
+    ],
+    "correctAnswer": "A mechanism where all previous logs are removed from the system and stored permanently in the storage disk"
+  },
+  {
+    "topic": "OS",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is 'Monolithic Kernel'?",
+    "options": [
+      "Smallest possible kernel",
+      "OS architecture where the entire operating system is working in kernel space",
+      "A kernel for one user",
+      "A frozen kernel"
+    ],
+    "correctAnswer": "OS architecture where the entire operating system is working in kernel space"
+  },
+  {
+    "topic": "CN",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "Which protocol is used for remote login?",
+    "options": [
+      "FTP",
+      "SMTP",
+      "TELNET/SSH",
+      "DHCP"
+    ],
+    "correctAnswer": "TELNET/SSH"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is 'Loose Coupling'?",
+    "options": [
+      "High dependency",
+      "Low dependency between components, allowing for easier maintenance and testing",
+      "No connection",
+      "Random classes"
+    ],
+    "correctAnswer": "Low dependency between components, allowing for easier maintenance and testing"
+  },
+  {
+    "topic": "DSA",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What is the time complexity of the Edmonds-Karp algorithm for maximum flow?",
+    "options": [
+      "O(V*E^2)",
+      "O(V^2*E)",
+      "O(E*log V)",
+      "O(V + E)"
+    ],
+    "correctAnswer": "O(V*E^2)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "What is the default order of ORDER BY clause in SQL?",
+    "options": [
+      "DESC",
+      "ASC",
+      "Random",
+      "Alphabetic"
+    ],
+    "correctAnswer": "ASC"
+  },
+  {
+    "topic": "OS",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is 'Translation Lookaside Buffer' (TLB)?",
+    "options": [
+      "CPU cache",
+      "A memory cache that is used to reduce the time taken to access a user memory location",
+      "Disk buffer",
+      "Network buffer"
+    ],
+    "correctAnswer": "A memory cache that is used to reduce the time taken to access a user memory location"
+  },
+  {
+    "topic": "CN",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is the purpose of 'NAT' (Network Address Translation)?",
+    "options": [
+      "Increasing internet speed",
+      "Remapping one IP address space into another by modifying network address information",
+      "Cleaning DNS",
+      "Securing a router"
+    ],
+    "correctAnswer": "Remapping one IP address space into another by modifying network address information"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What are 'Sealed Classes' in C#?",
+    "options": [
+      "Abstract classes",
+      "Classes that cannot be inherited from",
+      "Classes with no methods",
+      "Private classes"
+    ],
+    "correctAnswer": "Classes that cannot be inherited from"
+  },
+  {
+    "topic": "DSA",
+    "company": "TCS",
+    "difficulty": "easy",
+    "question": "What is the time complexity of access in a sorted array?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n log n)"
+    ],
+    "correctAnswer": "O(1)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is 'Cascading Rollback'?",
+    "options": [
+      "Single rollback",
+      "A situation where a failure of one transaction leads to a series of rollbacks of other transactions",
+      "Deleting a table",
+      "Formatting DB"
+    ],
+    "correctAnswer": "A situation where a failure of one transaction leads to a series of rollbacks of other transactions"
+  },
+  {
+    "topic": "OS",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "What is a 'User Mode'?",
+    "options": [
+      "Admin access",
+      "Processor mode in which application software and some non-privileged system software run",
+      "Hardware setup",
+      "Safety mode"
+    ],
+    "correctAnswer": "Processor mode in which application software and some non-privileged system software run"
+  },
+  {
+    "topic": "CN",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is 'OSPF' (Open Shortest Path First)?",
+    "options": [
+      "Distance Vector Routing Protocol",
+      "Link State Routing Protocol",
+      "Protocol for email",
+      "Hardware fix"
+    ],
+    "correctAnswer": "Link State Routing Protocol"
+  },
+  {
+    "topic": "OOPS",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is the 'Singleton Pattern'?",
+    "options": [
+      "Class with many instances",
+      "Ensuring a class has only one instance and providing a global point of access to it",
+      "Deleting instances",
+      "Static classes"
+    ],
+    "correctAnswer": "Ensuring a class has only one instance and providing a global point of access to it"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is the time complexity of the Burrows-Wheeler Transform (BWT)?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n log^2 n)",
+      "O(n^2)"
+    ],
+    "correctAnswer": "O(n)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "What is 'Outer Join'?",
+    "options": [
+      "Matching only",
+      "Join that keeps every record from either the left or right table even if no matching record exists in the other",
+      "External link",
+      "Remote join"
+    ],
+    "correctAnswer": "Join that keeps every record from either the left or right table even if no matching record exists in the other"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is 'Thrashing' related to?",
+    "options": [
+      "CPU speed",
+      "Excessive paging leading to low CPU throughput",
+      "Deadlock",
+      "Memory overflow"
+    ],
+    "correctAnswer": "Excessive paging leading to low CPU throughput"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "What is a 'Default Gateway'?",
+    "options": [
+      "The entrance to a house",
+      "The node that serves as an access point to other networks when no other route matches a destination IP address",
+      "A security guard",
+      "A type of firewall"
+    ],
+    "correctAnswer": "The node that serves as an access point to other networks when no other route matches a destination IP address"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is 'Lazy Initialization'?",
+    "options": [
+      "Initialization at start",
+      "Delaying the creation of an object, calculation of a value, or some other expensive process until the first time it is needed",
+      "Fast booting",
+      "Class hiding"
+    ],
+    "correctAnswer": "Delaying the creation of an object, calculation of a value, or some other expensive process until the first time it is needed"
+  },
+  {
+    "topic": "DSA",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "Which of these is a greedy algorithm?",
+    "options": [
+      "Merge Sort",
+      "Prim's Algorithm",
+      "Binary Search",
+      "Fibonacci DP"
+    ],
+    "correctAnswer": "Prim's Algorithm"
+  },
+  {
+    "topic": "DBMS",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "What is the 'CAP Theorem' in distributed databases?",
+    "options": [
+      "Consistency, Accuracy, Performance",
+      "Consistency, Availability, Partition tolerance",
+      "Cost, Access, Power",
+      "Commit, Abort, Primary"
+    ],
+    "correctAnswer": "Consistency, Availability, Partition tolerance"
+  },
+  {
+    "topic": "OS",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "What is 'Paging'?",
+    "options": [
+      "Printing a document",
+      "Memory management scheme that eliminates the need for contiguous allocation of physical memory",
+      "Disk sorting",
+      "CPU cooling"
+    ],
+    "correctAnswer": "Memory management scheme that eliminates the need for contiguous allocation of physical memory"
+  },
+  {
+    "topic": "CN",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is 'VLAN' (Virtual Local Area Network)?",
+    "options": [
+      "A physical network",
+      "A logical subnetwork that can group together a collection of devices from different physical LANs",
+      "A cloud network",
+      "A secure network"
+    ],
+    "correctAnswer": "A logical subnetwork that can group together a collection of devices from different physical LANs"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is the 'Observer Pattern'?",
+    "options": [
+      "Hiding data",
+      "A software design pattern in which an object, named the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes",
+      "Inheriting privatized classes",
+      "Monitoring logs"
+    ],
+    "correctAnswer": "A software design pattern in which an object, named the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes"
+  },
+  {
+    "topic": "DSA",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "In a stack, where are elements added and removed?",
+    "options": [
+      "Bottom",
+      "Middle",
+      "Top",
+      "Random position"
+    ],
+    "correctAnswer": "Top"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is 'Transitive Dependency'?",
+    "options": [
+      "Direct dependency",
+      "An indirect dependency in which X->Z because X->Y and Y->Z",
+      "Circular dependency",
+      "Null dependency"
+    ],
+    "correctAnswer": "An indirect dependency in which X->Z because X->Y and Y->Z"
+  },
+  {
+    "topic": "OS",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "What is a 'Critical Section'?",
+    "options": [
+      "A protected part of memory",
+      "A part of a multi-process program that may not be concurrently executed by more than one process",
+      "A high priority code",
+      "A hardware fail"
+    ],
+    "correctAnswer": "A part of a multi-process program that may not be concurrently executed by more than one process"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "What is an 'Ethernet'?",
+    "options": [
+      "Wireless internet",
+      "A family of computer networking technologies commonly used in local area networks (LANs)",
+      "A type of website",
+      "A CPU component"
+    ],
+    "correctAnswer": "A family of computer networking technologies commonly used in local area networks (LANs)"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is 'Static Method'?",
+    "options": [
+      "Method belonging to an object",
+      "Method belonging to the class itself, rather than an instance of the class",
+      "Hidden method",
+      "Final method"
+    ],
+    "correctAnswer": "Method belonging to the class itself, rather than an instance of the class"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is the time complexity of the suffix array construction using O(n log n) algorithm?",
+    "options": [
+      "O(n^2)",
+      "O(n log n)",
+      "O(n log^2 n)",
+      "O(n)"
+    ],
+    "correctAnswer": "O(n log n)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "Which SQL command is used to remove all records from a table, but not the table itself?",
+    "options": [
+      "DELETE",
+      "TRUNCATE",
+      "DROP",
+      "REMOVE"
+    ],
+    "correctAnswer": "TRUNCATE"
+  },
+  {
+    "topic": "OS",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "What is 'Preemption'?",
+    "options": [
+      "Starting a process",
+      "The act of temporarily interrupting a task being carried out by a computer system, without requiring its cooperation",
+      "Deleting a thread",
+      "CPU thermal control"
+    ],
+    "correctAnswer": "The act of temporarily interrupting a task being carried out by a computer system, without requiring its cooperation"
+  },
+  {
+    "topic": "CN",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is 'Load Balancing'?",
+    "options": [
+      "Increasing power supply",
+      "Distributing network or application traffic across multiple servers",
+      "Cleaning cache",
+      "Hashing passwords"
+    ],
+    "correctAnswer": "Distributing network or application traffic across multiple servers"
+  },
+  {
+    "topic": "OOPS",
+    "company": "TCS",
+    "difficulty": "easy",
+    "question": "What is 'Inheritance'?",
+    "options": [
+      "Hiding data",
+      "The mechanism of basing an object or class upon another object or class",
+      "Dynamic allocation",
+      "Pointer usage"
+    ],
+    "correctAnswer": "The mechanism of basing an object or class upon another object or class"
+  },
+  {
+    "topic": "DSA",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is the time complexity of the Bubble Sort algorithm in the average case?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n²)",
+      "O(2^n)"
+    ],
+    "correctAnswer": "O(n²)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What is 'Optimistic Concurrency Control'?",
+    "options": [
+      "Locking everything",
+      "A concurrency control method that assumes that multiple transactions can frequently complete without interfering with each other",
+      "Fast queries",
+      "Deleting logs"
+    ],
+    "correctAnswer": "A concurrency control method that assumes that multiple transactions can frequently complete without interfering with each other"
+  },
+  {
+    "topic": "OS",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "What is a 'Shell'?",
+    "options": [
+      "Hardware casing",
+      "User interface for access to an operating system's services",
+      "Internal database",
+      "CPU part"
+    ],
+    "correctAnswer": "User interface for access to an operating system's services"
+  },
+  {
+    "topic": "CN",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is 'Encryption'?",
+    "options": [
+      "Increasing file size",
+      "The process of converting information or data into a code, especially to prevent unauthorized access",
+      "Deleting files",
+      "Fast browsing"
+    ],
+    "correctAnswer": "The process of converting information or data into a code, especially to prevent unauthorized access"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is 'Dynamic Link Library' (DLL)?",
+    "options": [
+      "Static library",
+      "Microsoft's implementation of the shared library concept in the Windows and OS/2 operating systems",
+      "A type of class",
+      "A hidden file"
+    ],
+    "correctAnswer": "Microsoft's implementation of the shared library concept in the Windows and OS/2 operating systems"
+  },
+  {
+    "topic": "DSA",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "What is the time complexity of the Bellman-Ford algorithm?",
+    "options": [
+      "O(V*E)",
+      "O(V^2)",
+      "O(E log V)",
+      "O(V + E)"
+    ],
+    "correctAnswer": "O(V*E)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "What is 'DML' (Data Manipulation Language)?",
+    "options": [
+      "SQL used for defining tables",
+      "SQL used for managing data within schema objects",
+      "Encrypted SQL",
+      "External SQL"
+    ],
+    "correctAnswer": "SQL used for managing data within schema objects"
+  },
+  {
+    "topic": "OS",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "What is 'Demand Paging'?",
+    "options": [
+      "Loading all process at once",
+      "Loading a page into memory only when there is an attempt to access it",
+      "Deleting pages",
+      "RAM sorting"
+    ],
+    "correctAnswer": "Loading a page into memory only when there is an attempt to access it"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is 'VPN' (Virtual Private Network)?",
+    "options": [
+      "Fastest internet",
+      "Extends a private network across a public network and enables users to send and receive data as if their computing devices were directly connected to the private network",
+      "A router setting",
+      "A browser cache"
+    ],
+    "correctAnswer": "Extends a private network across a public network and enables users to send and receive data as if their computing devices were directly connected to the private network"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "What is 'Field' in OOPS?",
+    "options": [
+      "A method",
+      "A variable of any type that is declared directly in a class or struct",
+      "A UI component",
+      "A header file"
+    ],
+    "correctAnswer": "A variable of any type that is declared directly in a class or struct"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "Which data structure is recursive in nature?",
+    "options": [
+      "Array",
+      "Linked List",
+      "Tree",
+      "Stack"
+    ],
+    "correctAnswer": "Tree"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is 'Third Normal Form' (3NF)?",
+    "options": [
+      "No partial dependency",
+      "No transitive dependency for non-prime attributes",
+      "Atomic values",
+      "Primary keys used"
+    ],
+    "correctAnswer": "No transitive dependency for non-prime attributes"
+  },
+  {
+    "topic": "OS",
+    "company": "Infosys",
+    "difficulty": "hard",
+    "question": "What is 'Mutual Exclusion'?",
+    "options": [
+      "Allowing all processes at once",
+      "Requirement that one process cannot be in a critical section of a program while another process is in it",
+      "Starvation",
+      "High throughput"
+    ],
+    "correctAnswer": "Requirement that one process cannot be in a critical section of a program while another process is in it"
+  },
+  {
+    "topic": "CN",
+    "company": "TCS",
+    "difficulty": "easy",
+    "question": "What does WAN stand for?",
+    "options": [
+      "Wide Area Network",
+      "Wireless Area Network",
+      "West Area Network",
+      "Web Area Network"
+    ],
+    "correctAnswer": "Wide Area Network"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "What is the 'Factory Design Pattern'?",
+    "options": [
+      "Hiding classes",
+      "Creating objects without specifying the exact class of object that will be created",
+      "Mass producing objects",
+      "Inheriting private modules"
+    ],
+    "correctAnswer": "Creating objects without specifying the exact class of object that will be created"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is the time complexity of the quicksort algorithm in the worst case?",
+    "options": [
+      "O(n log n)",
+      "O(n)",
+      "O(n²)",
+      "O(log n)"
+    ],
+    "correctAnswer": "O(n²)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is a 'Composite Key'?",
+    "options": [
+      "Key for images",
+      "Primary key that consists of more than one column",
+      "Encrypted key",
+      "External key"
+    ],
+    "correctAnswer": "Primary key that consists of more than one column"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "What is 'Clock Speed' of a CPU?",
+    "options": [
+      "Time of day",
+      "The speed at which a microprocessor executes instructions",
+      "Fan speed",
+      "Network speed"
+    ],
+    "correctAnswer": "The speed at which a microprocessor executes instructions"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is the 'DNS' (Domain Name System)?",
+    "options": [
+      "Data Network System",
+      "Hierarchical and decentralized naming system for computers and other resources connected to the Internet",
+      "Digital Network Safe",
+      "Domain Node Server"
+    ],
+    "correctAnswer": "Hierarchical and decentralized naming system for computers and other resources connected to the Internet"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Infosys",
+    "difficulty": "hard",
+    "question": "What is 'Metaprogramming'?",
+    "options": [
+      "Programming in 3D",
+      "The writing of computer programs with the ability to treat programs as their data",
+      "Hidden programming",
+      "Static logic"
+    ],
+    "correctAnswer": "The writing of computer programs with the ability to treat programs as their data"
+  },
+  {
+    "topic": "DSA",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "Which of these is used for data compression?",
+    "options": [
+      "Breadth First Search",
+      "Huffman Coding",
+      "Selection Sort",
+      "Binary Search"
+    ],
+    "correctAnswer": "Huffman Coding"
+  },
+  {
+    "topic": "DBMS",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "What is a 'Database Trigger'?",
+    "options": [
+      "A button in UI",
+      "Procedural code that is automatically executed in response to certain events on a particular table",
+      "A query debugger",
+      "An index helper"
+    ],
+    "correctAnswer": "Procedural code that is automatically executed in response to certain events on a particular table"
+  },
+  {
+    "topic": "OS",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is 'Scheduling' in OS?",
+    "options": [
+      "Time keeping",
+      "The method by which work is assigned to resources that complete the work",
+      "Deleting files",
+      "Network setup"
+    ],
+    "correctAnswer": "The method by which work is assigned to resources that complete the work"
+  },
+  {
+    "topic": "CN",
+    "company": "Amazon",
+    "difficulty": "easy",
+    "question": "What port does HTTP use?",
+    "options": [
+      "80",
+      "443",
+      "21",
+      "22"
+    ],
+    "correctAnswer": "80"
+  },
+  {
+    "topic": "OOPS",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "What is 'Interface Segregation Principle' (ISP)?",
+    "options": [
+      "One interface for all",
+      "Clients should not be forced to depend on methods they do not use",
+      "Small classes",
+      "Hiding variables"
+    ],
+    "correctAnswer": "Clients should not be forced to depend on methods they do not use"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is the time complexity of the Union-Find algorithm with path compression and union by rank?",
+    "options": [
+      "O(log n)",
+      "O(α(n)) - Inverse Ackermann function",
+      "O(n)",
+      "O(n^2)"
+    ],
+    "correctAnswer": "O(α(n)) - Inverse Ackermann function"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "What is 'SQL'?",
+    "options": [
+      "Simple Query Language",
+      "Structured Query Language",
+      "Secure Query Loop",
+      "Standard Query Level"
+    ],
+    "correctAnswer": "Structured Query Language"
+  },
+  {
+    "topic": "OS",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What is 'Thread Local Storage' (TLS)?",
+    "options": [
+      "Global memory",
+      "Computer programming method that uses static or global memory local to a thread",
+      "Hard disk cache",
+      "Network buffer"
+    ],
+    "correctAnswer": "Computer programming method that uses static or global memory local to a thread"
+  },
+  {
+    "topic": "CN",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is 'Packet Switching'?",
+    "options": [
+      "Sending data in chunks",
+      "A method of grouping data that is transmitted over a digital network into packets",
+      "Switching routers",
+      "Deleting packets"
+    ],
+    "correctAnswer": "A method of grouping data that is transmitted over a digital network into packets"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "What is a 'Method' in OOPS?",
+    "options": [
+      "A variable",
+      "A logical procedure or mathematical function that is associated with a class",
+      "A class header",
+      "A UI tool"
+    ],
+    "correctAnswer": "A logical procedure or mathematical function that is associated with a class"
+  },
+  {
+    "topic": "DSA",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "In a Max-Heap, where is the second largest element located?",
+    "options": [
+      "Root",
+      "Children of the root",
+      "Leaf node",
+      "Anywhere in the right subtree"
+    ],
+    "correctAnswer": "Children of the root"
+  },
+  {
+    "topic": "DBMS",
+    "company": "TCS",
+    "difficulty": "hard",
+    "question": "What is 'Query Optimization'?",
+    "options": [
+      "Encrypting query",
+      "The process of choosing the most efficient way to execute a SQL statement",
+      "Formatting code",
+      "Adding more RAM"
+    ],
+    "correctAnswer": "The process of choosing the most efficient way to execute a SQL statement"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is a 'Semaphores'?",
+    "options": [
+      "A hardware chip",
+      "A variable or abstract data type used to control access to a common resource by multiple processes",
+      "A type of query",
+      "A process state"
+    ],
+    "correctAnswer": "A variable or abstract data type used to control access to a common resource by multiple processes"
+  },
+  {
+    "topic": "CN",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What is the 'OSI Model'?",
+    "options": [
+      "A network device",
+      "Conceptual model that characterizes and standardizes the communication functions of a telecommunication or computing system without regard to its underlying internal structure and technology",
+      "A routing speed",
+      "A security guard"
+    ],
+    "correctAnswer": "Conceptual model that characterizes and standardizes the communication functions of a telecommunication or computing system without regard to its underlying internal structure and technology"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is 'Dependency Injection' (DI)?",
+    "options": [
+      "Static coding",
+      "Design pattern in which an object or function receives other objects or functions that it depends on",
+      "Deleting parents",
+      "Accessing memory"
+    ],
+    "correctAnswer": "Design pattern in which an object or function receives other objects or functions that it depends on"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is the time complexity of the Tarjan's strongly connected components algorithm?",
+    "options": [
+      "O(V+E)",
+      "O(V*E)",
+      "O(V log V)",
+      "O(V^2)"
+    ],
+    "correctAnswer": "O(V+E)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Infosys",
+    "difficulty": "easy",
+    "question": "What is a 'Database'?",
+    "options": [
+      "A hardware shelf",
+      "An organized collection of data, generally stored and accessed electronically from a computer system",
+      "A programming language",
+      "A monitor part"
+    ],
+    "correctAnswer": "An organized collection of data, generally stored and accessed electronically from a computer system"
+  },
+  {
+    "topic": "OS",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What is 'Swapping' in OS?",
+    "options": [
+      "Changing users",
+      "Memory management technique that involves moving a process from main memory to secondary storage",
+      "Deleting files",
+      "Rebooting"
+    ],
+    "correctAnswer": "Memory management technique that involves moving a process from main memory to secondary storage"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is 'Proxy' in computer networking?",
+    "options": [
+      "False identity",
+      "Server that sits between a client application and a real server",
+      "Fast internet",
+      "Hidden IP"
+    ],
+    "correctAnswer": "Server that sits between a client application and a real server"
+  },
+  {
+    "topic": "OOPS",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is the 'Template Method Pattern'?",
+    "options": [
+      "Formatting strings",
+      "Design pattern that defines the program skeleton of an algorithm in an operation, deferring some steps to subclasses",
+      "Copying classes",
+      "Static logic"
+    ],
+    "correctAnswer": "Design pattern that defines the program skeleton of an algorithm in an operation, deferring some steps to subclasses"
+  },
+  {
+    "topic": "DSA",
+    "company": "Amazon",
+    "difficulty": "medium",
+    "question": "What is the time complexity of inserting a node in a Binary Search Tree (average case)?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "correctAnswer": "O(log n)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Google",
+    "difficulty": "hard",
+    "question": "What is 'BigData'?",
+    "options": [
+      "Large databases",
+      "Extremely large data sets that may be analyzed computationally to reveal patterns, trends, and associations",
+      "Fast queries",
+      "Encrypted data"
+    ],
+    "correctAnswer": "Extremely large data sets that may be analyzed computationally to reveal patterns, trends, and associations"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is 'Kernel Panic'?",
+    "options": [
+      "Safety shutdown",
+      "Safety measure taken by an operating system's kernel upon detecting a fatal internal error",
+      "CPU thermal shutdown",
+      "Network crash"
+    ],
+    "correctAnswer": "Safety measure taken by an operating system's kernel upon detecting a fatal internal error"
+  },
+  {
+    "topic": "CN",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "What is a 'Node' in networking?",
+    "options": [
+      "A connection point",
+      "A redistribution point or a communication endpoint",
+      "A network cable",
+      "A virus"
+    ],
+    "correctAnswer": "A redistribution point or a communication endpoint"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Infosys",
+    "difficulty": "medium",
+    "question": "What is 'Data Hiding'?",
+    "options": [
+      "Deleting data",
+      "Ensuring that internal object state is hidden from the outside world",
+      "Encrypting data",
+      "Hiring modules"
+    ],
+    "correctAnswer": "Ensuring that internal object state is hidden from the outside world"
+  },
+  {
+    "topic": "DSA",
+    "company": "Microsoft",
+    "difficulty": "medium",
+    "question": "Which sorting algorithm is often used when nearly all elements are already sorted?",
+    "options": [
+      "QuickSort",
+      "HeapSort",
+      "InsertionSort",
+      "SelectionSort"
+    ],
+    "correctAnswer": "InsertionSort"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is 'Distributed Locking'?",
+    "options": [
+      "Locking local DB",
+      "Mechanism for coordinating access to shared resources across multiple independent servers",
+      "Hashing passwords",
+      "Deleting records"
+    ],
+    "correctAnswer": "Mechanism for coordinating access to shared resources across multiple independent servers"
+  },
+  {
+    "topic": "OS",
+    "company": "Google",
+    "difficulty": "easy",
+    "question": "What is the primary function of the 'Dispatcher' in OS?",
+    "options": [
+      "Deleting processes",
+      "Giving control of the CPU to the process selected by the short-term scheduler",
+      "Clock synchronization",
+      "Fan control"
+    ],
+    "correctAnswer": "Giving control of the CPU to the process selected by the short-term scheduler"
+  },
+  {
+    "topic": "CN",
+    "company": "TCS",
+    "difficulty": "medium",
+    "question": "What is 'Packet Loss'?",
+    "options": [
+      "Losing a cable",
+      "A situation where one or more packets of data travelling across a computer network fail to reach their destination",
+      "Losing internet speed",
+      "Slow browsing"
+    ],
+    "correctAnswer": "A situation where one or more packets of data travelling across a computer network fail to reach their destination"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Infosys",
+    "difficulty": "hard",
+    "question": "What is a 'MixIn' in OOPS?",
+    "options": [
+      "A type of constructor",
+      "A class that contains methods for use by other classes without having to be the parent class of those other classes",
+      "A merged interface",
+      "Static logic"
+    ],
+    "correctAnswer": "A class that contains methods for use by other classes without having to be the parent class of those other classes"
+  },
+  {
+    "topic": "DSA",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is the amortized time complexity of the dynamic array's append operation?",
+    "options": [
+      "O(1)",
+      "O(n)",
+      "O(log n)",
+      "O(n^2)"
+    ],
+    "correctAnswer": "O(1)"
+  },
+  {
+    "topic": "DBMS",
+    "company": "Microsoft",
+    "difficulty": "easy",
+    "question": "Which command is used to save changes permanently in a database?",
+    "options": [
+      "SAVE",
+      "COMMIT",
+      "PUSH",
+      "UPGRADE"
+    ],
+    "correctAnswer": "COMMIT"
+  },
+  {
+    "topic": "OS",
+    "company": "Amazon",
+    "difficulty": "hard",
+    "question": "What is 'NUMA' (Non-Uniform Memory Access)?",
+    "options": [
+      "Using only one RAM slot",
+      "Computer memory design used in multiprocessing, where the memory access time depends on the memory location relative to the processor",
+      "Virtual memory",
+      "High speed buffer"
+    ],
+    "correctAnswer": "Computer memory design used in multiprocessing, where the memory access time depends on the memory location relative to the processor"
+  },
+  {
+    "topic": "CN",
+    "company": "Google",
+    "difficulty": "medium",
+    "question": "What is 'Round Trip Time' (RTT)?",
+    "options": [
+      "Duration of a round trip",
+      "The time it takes for a signal to be sent plus the time it takes for an acknowledgment of that signal to be received",
+      "Total browsing time",
+      "Encryption speed"
+    ],
+    "correctAnswer": "The time it takes for a signal to be sent plus the time it takes for an acknowledgment of that signal to be received"
+  },
+  {
+    "topic": "OOPS",
+    "company": "Microsoft",
+    "difficulty": "hard",
+    "question": "What is 'Reflection' in OOPS?",
+    "options": [
+      "Mirroring code",
+      "The ability of a computer program to examine, introspect, and modify its own structure and behavior at runtime",
+      "Copying classes",
+      "Static typing"
+    ],
+    "correctAnswer": "The ability of a computer program to examine, introspect, and modify its own structure and behavior at runtime"
+  }
+]
