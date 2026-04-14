@@ -3,22 +3,33 @@ import {
   Home,
   Mic,
   FileSearch,
+  ClipboardList,
   Settings,
   LogOut,
   Sun,
   Moon,
   Menu,
   X,
+  BookOpen,
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Apply dark mode on first load from localStorage
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "dark") {
+  document.documentElement.classList.add("dark");
+} else {
+  document.documentElement.classList.remove("dark");
+}
+
 const navItems = [
   { label: "Dashboard", path: "/dashboard", icon: Home },
   { label: "AI Interview", path: "/interview", icon: Mic },
+  { label: "MCQ Practice", path: "/mcq", icon: BookOpen },
   { label: "ATS Checker", path: "/ats", icon: FileSearch },
-  { label: "Reports", path: "/reports", icon: FileSearch },
+  { label: "Reports", path: "/reports", icon: ClipboardList },
   { label: "Settings", path: "/settings", icon: Settings },
 ];
 

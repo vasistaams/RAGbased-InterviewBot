@@ -11,6 +11,7 @@ import {
   Sparkles,
   TrendingUp,
   AlertTriangle,
+  BookOpen,
 } from "lucide-react";
 
 import api from "../services/api";
@@ -84,7 +85,14 @@ export default function Dashboard() {
     { session: "#10", score: 92 },
   ];
 
-  const displayName = data?.name || user?.firstName || "User";
+  // Derive best display name: Clerk firstName > full name > email prefix > "User"
+  const clerkName =
+    user?.firstName ||
+    user?.fullName ||
+    (user?.primaryEmailAddress?.emailAddress
+      ? user.primaryEmailAddress.emailAddress.split("@")[0]
+      : null);
+  const displayName = data?.name && data.name !== "Clerk User" ? data.name : clerkName || "User";
 
   return (
     <div className="space-y-8">
@@ -211,12 +219,20 @@ export default function Dashboard() {
             delay={0.5}
           />
           <ActionCard
+            title="MCQ Practice"
+            subtitle="Topic-based quiz mode"
+            icon={BookOpen}
+            to="/mcq"
+            gradient="gradient-accent"
+            delay={0.6}
+          />
+          <ActionCard
             title="Resume Check"
             subtitle="ATS compatibility analyzer"
             icon={FileSearch}
             to="/ats"
             gradient="gradient-success"
-            delay={0.6}
+            delay={0.7}
           />
           <ActionCard
             title="Settings"
@@ -224,7 +240,7 @@ export default function Dashboard() {
             icon={Settings}
             to="/settings"
             gradient="gradient-accent"
-            delay={0.7}
+            delay={0.8}
           />
         </div>
       </div>

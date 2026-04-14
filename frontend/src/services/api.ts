@@ -59,15 +59,25 @@ const raw = axios.create({
 
 // ─── Auth Interceptor ────────────────────────────────────────
 async function attachToken(config: InternalAxiosRequestConfig) {
-  if (_getToken) {
-    try {
-      const token = await _getToken();
-      if (token) {
-        config.headers.Authorization = `Bearer ${token}`;
-      }
-    } catch {
-      // Token fetch failed — let request proceed (backend will 401)
+  try {
+    let token = null;
+
+    if (_getToken) {
+      token = await _getToken();
     }
+    
+    // Fallback: Directly use window.Clerk if available
+    if (!token && typeof window !== "undefined" && (window as any).Clerk?.session) {
+      token = await ((window as any).Clerk.session.getToken)();
+    }
+
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    } else {
+      console.warn("[API] No Clerk JWT token found to attach.");
+    }
+  } catch (error) {
+    console.error("[API] Failed to get Clerk token:", error);
   }
   return config;
 }
@@ -81,8 +91,11 @@ function addRetry(instance: typeof api) {
     (res) => res,
     async (error) => {
       const config = error.config;
+      console.error("[API Error]", error.response?.status, config?.url, error.message);
+
       if (error.response && error.response.status === 401) {
         // Unauthorized or Invalid token triggers a session clear / redirect
+        console.error("[API Error] 401 Unauthorized - Token may be missing or invalid");
         window.location.href = '/login';
         return Promise.reject(error);
       }

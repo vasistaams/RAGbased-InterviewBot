@@ -7,6 +7,10 @@ import {
   Sparkles,
   CheckCircle,
   RotateCcw,
+  Upload,
+  FileText,
+  Mic as MicIcon,
+  Video
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -46,6 +50,7 @@ export default function Interview() {
   // Config state
   const [difficulty, setDifficulty] = useState("medium");
   const [questionCount, setQuestionCount] = useState(5);
+  const [resumeFile, setResumeFile] = useState<File | null>(null);
 
   // Chat state
   const [messages, setMessages] = useState<Message[]>([]);
@@ -56,22 +61,100 @@ export default function Interview() {
   const [error, setError] = useState<string | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  // Video / Audio state
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [stream, setStream] = useState<MediaStream | null>(null);
+  const [isListening, setIsListening] = useState(false);
+  const recognitionRef = useRef<any>(null);
+
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
   }, [messages]);
 
+  // Initialize Speech Recognition
+  useEffect(() => {
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (SpeechRecognition) {
+      const recognition = new SpeechRecognition();
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      recognition.lang = "en-US";
+      
+      recognition.onresult = (event: any) => {
+        let interim = "";
+        let final = "";
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          if (event.results[i].isFinal) {
+            final += event.results[i][0].transcript;
+          } else {
+            interim += event.results[i][0].transcript;
+          }
+        }
+        if (final) setCurrentInput((prev) => prev + (prev && !prev.endsWith(" ") ? " " : "") + final);
+      };
+      
+      recognition.onend = () => {
+        setIsListening(false);
+      };
+      
+      recognitionRef.current = recognition;
+    }
+    
+    return () => {
+      if (stream) stream.getTracks().forEach(t => t.stop());
+      window.speechSynthesis?.cancel();
+      recognitionRef.current?.stop();
+    };
+  }, []);
+
+  const toggleListening = () => {
+    if (!recognitionRef.current) return;
+    if (isListening) {
+      recognitionRef.current.stop();
+      setIsListening(false);
+    } else {
+      recognitionRef.current.start();
+      setIsListening(true);
+    }
+  };
+
+  const speakText = (text: string) => {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      window.speechSynthesis.speak(utterance);
+    }
+  };
+
   /* ── Start Interview ──────────────────────────────────── */
   const startInterview = async () => {
     setLoading(true);
     setError(null);
     try {
-      // Increment session counter on backend
-      await raw.post("/start-session");
+      console.log("[Interview] Starting session — difficulty:", difficulty, "questions:", questionCount);
 
-      // Start the interview session (server sets up session state)
-      await api.post("/interview/start");
+      // Attempt media permissions early
+      let s: MediaStream | null = null;
+      try {
+        s = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+        setStream(s);
+        if (videoRef.current) videoRef.current.srcObject = s;
+      } catch (mediaErr) {
+        console.warn("Camera/Mic access denied or unavailable", mediaErr);
+      }
+
+      try { await raw.post("/start-session"); } catch { /* non-critical */ }
+
+      // Send start configuraton via FormData (Resume included)
+      const form = new FormData();
+      if (resumeFile) form.append("resume", resumeFile);
+      form.append("difficulty", difficulty);
+      form.append("numQuestions", questionCount.toString());
+
+      await api.post("/interview/start", form, { headers: { "Content-Type": "multipart/form-data" } });
+      console.log("[Interview] /api/interview/start OK");
 
       // Get first question
       const res = await api.post("/interview/chat-next", {
@@ -79,14 +162,17 @@ export default function Interview() {
         difficulty,
         totalQuestions: questionCount,
       });
+      console.log("[Interview] First question received:", res.data);
 
       const firstQ = res.data.data;
       setMessages([{ type: "bot", text: firstQ.question, category: firstQ.category }]);
       setProgress({ current: 1, total: questionCount });
       setStep("chat");
+      speakText(firstQ.question);
     } catch (err) {
       console.error("Failed to start interview", err);
       setError("Failed to start interview. Is the backend running?");
+      if (stream) stream.getTracks().forEach(t => t.stop());
     } finally {
       setLoading(false);
     }
@@ -146,6 +232,7 @@ export default function Interview() {
           { type: "bot", text: nextQ.question, category: nextQ.category },
         ]);
         setProgress((prev) => ({ ...prev, current: prev.current + 1 }));
+        speakText(nextQ.question);
       }
     } catch (err) {
       console.error("Failed to submit answer", err);
@@ -185,12 +272,17 @@ export default function Interview() {
 
   /* ── Reset ────────────────────────────────────────────── */
   const resetInterview = () => {
+    if (stream) stream.getTracks().forEach(t => t.stop());
+    window.speechSynthesis?.cancel();
+    recognitionRef.current?.stop();
+    setStream(null);
     setStep("config");
     setMessages([]);
     setProgress({ current: 0, total: 5 });
     setReview(null);
     setCurrentInput("");
     setError(null);
+    setResumeFile(null);
   };
 
   /* ── Difficulty options ───────────────────────────────── */
@@ -265,6 +357,30 @@ export default function Interview() {
                     {opt.label}
                   </button>
                 ))}
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <label className="text-sm font-semibold text-gray-700 dark:text-gray-300 flex items-center gap-2">
+                <FileText size={16} /> Optional Resume Upload
+              </label>
+              <div
+                className="w-full py-6 rounded-xl border-2 border-dashed border-brand-200 dark:border-brand-800/40 hover:border-brand-400 dark:hover:border-brand-600 bg-brand-50/50 dark:bg-brand-900/10 flex flex-col items-center gap-2 transition-all duration-200 cursor-pointer"
+                onClick={() => document.getElementById("interview-resume")?.click()}
+              >
+                <Upload size={20} className="text-brand-500" />
+                <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                  {resumeFile ? resumeFile.name : "Upload PDF (for personalized questions)"}
+                </p>
+                <input
+                  type="file"
+                  id="interview-resume"
+                  hidden
+                  accept=".pdf"
+                  onChange={(e) => {
+                    if (e.target.files?.[0]) setResumeFile(e.target.files[0]);
+                  }}
+                />
               </div>
             </div>
 
@@ -358,16 +474,51 @@ export default function Interview() {
             </div>
           )}
 
-          {/* Messages */}
-          <div
-            ref={scrollRef}
-            className="
-              flex-1 overflow-y-auto rounded-2xl
-              bg-white dark:bg-[#1a1528]
-              border border-brand-100/40 dark:border-brand-800/20
-              shadow-card p-5 space-y-4
-            "
-          >
+          <div className="flex flex-col lg:flex-row gap-6 flex-1 overflow-hidden">
+            {/* Video Feed Header */}
+            <div className="hidden lg:flex flex-col w-[300px] shrink-0 gap-4">
+              <div className="rounded-2xl bg-black overflow-hidden relative shadow-card h-[240px] border border-brand-100/40 dark:border-brand-800/20">
+                {stream ? (
+                  <video
+                    autoPlay
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                    ref={(el) => {
+                      if (el && stream) el.srcObject = stream;
+                    }}
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-500 dark:text-gray-400">
+                    <Video size={32} className="mb-2 opacity-50" />
+                    <span className="text-xs">Camera Offline</span>
+                  </div>
+                )}
+                <div className="absolute bottom-3 left-3 flex items-center gap-2 px-3 py-1.5 rounded-lg bg-black/50 backdrop-blur-md">
+                  <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                  <span className="text-xs font-semibold text-white tracking-wide">REC</span>
+                </div>
+              </div>
+              <div className="p-5 rounded-2xl bg-white dark:bg-[#1a1528] border border-brand-100/40 dark:border-brand-800/20 shadow-card">
+                <h3 className="text-sm font-bold text-gray-800 dark:text-gray-200 mb-1">AI Interviewer</h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                  The AI is actively listening and analyzing your responses. Speak clearly into your microphone.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Pane Container */}
+            <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
+              {/* Messages */}
+              <div
+                ref={scrollRef}
+                className="
+                  flex-1 overflow-y-auto rounded-2xl
+                  bg-white dark:bg-[#1a1528]
+                  border border-brand-100/40 dark:border-brand-800/20
+                  shadow-card p-5 space-y-4
+                "
+              >
             {messages.map((m, i) => (
               <motion.div
                 key={i}
@@ -434,8 +585,21 @@ export default function Interview() {
                   }
                 }}
                 placeholder="Type your answer..."
-                rows={1}
+                rows={2}
               />
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={toggleListening}
+                className={`
+                  w-12 h-12 rounded-xl flex items-center justify-center text-white
+                  shadow-lg transition-all duration-200 shrink-0
+                  ${isListening ? "bg-red-500 shadow-red-500/40 animate-pulse" : "bg-gray-400 dark:bg-gray-600 hover:bg-gray-500"}
+                `}
+                title={isListening ? "Stop listening" : "Start speaking"}
+              >
+                <MicIcon size={18} />
+              </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -452,7 +616,9 @@ export default function Interview() {
               </motion.button>
             </div>
           </div>
-        </motion.div>
+        </div>
+      </div>
+    </motion.div>
       )}
 
       {/* ═══ REVIEW STEP ═══════════════════════════════════ */}

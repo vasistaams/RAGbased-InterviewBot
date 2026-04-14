@@ -47,7 +47,7 @@ const PDFDocument = require('pdfkit');
 
 // Services
 const userStore = require('./services/user-store');
-const { clerkMiddleware } = require('@clerk/express');
+const { clerkMiddleware, requireAuth: ClerkExpressRequireAuth } = require('@clerk/express');
 const { protectRoute } = require('./middleware/auth');
 const { retrieve, getTopics, loadKnowledgeBase, getQuestionsByDifficulty, evaluateAnswer } = require('./services/retriever');
 const { getHelpAnswer } = require('./services/assistant');
@@ -101,9 +101,31 @@ function sendError(res, error = 'Internal Server Error', status = 500) {
 }
 
 // Middleware setup
-app.use(cors());
+// Allow requests from the Vite dev server with Authorization headers
+app.use(cors({
+  origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 app.use(express.json());
-app.use(clerkMiddleware()); // Global Clerk session parsing
+app.use(clerkMiddleware()); // Global Clerk session parsing — populates req.auth
+
+// Session middleware (required for req.session.* in interview routes)
+app.use(session({
+  secret: process.env.SESSION_SECRET || 'interviewbot-secret-key',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false, maxAge: 24 * 60 * 60 * 1000 } // 24h
+}));
+
+// Log incoming requests for debugging
+app.use((req, res, next) => {
+  console.log(`[Backend Log] ${req.method} ${req.url} | Auth: ${req.headers.authorization ? 'present' : 'MISSING'}`);
+  next();
+});
+
+// NOTE: protectRoute already calls requireAuth() internally — no need for a global guard here.
+// Individual routes use protectRoute which handles Clerk token verification + MongoDB user sync.
 
 // Backend root route - instructional or redirect to frontend
 app.get('/', (req, res) => {
@@ -191,18 +213,46 @@ app.put('/api/user/theme', protectRoute, async (req, res) => {
 //  INTERVIEW ROUTES
 // ═══════════════════════════════════════════════════════════════
 
-app.post('/api/interview/start', protectRoute, (req, res) => {
-  req.session.interviewStart = Date.now();
-  req.session.questionCount = 0;
-  req.session.interviewResults = [];
-  req.session.interviewQuestions = [];
-  res.json({ success: true, message: 'Interview session started' });
+app.post('/api/interview/start', protectRoute, upload.single('resume'), async (req, res) => {
+  try {
+    const numQ = parseInt(req.body.numQuestions) || 5;
+    const diff = req.body.difficulty || "medium";
+
+    let resumeText = "";
+    if (req.file) {
+      await userStore.updateUser(req.mongoUser._id, { resumePath: req.file.path, resumeName: req.file.originalname });
+      const pdfBuffer = fs.readFileSync(req.file.path);
+      const pdfData = await pdfParse(pdfBuffer);
+      resumeText = pdfData.text;
+    } else {
+      const user = await userStore.findUserById(req.mongoUser._id);
+      if (user?.resumePath && fs.existsSync(user.resumePath)) {
+        const pdfBuffer = fs.readFileSync(user.resumePath);
+        const pdfData = await pdfParse(pdfBuffer);
+        resumeText = pdfData.text;
+      }
+    }
+
+    req.session.interviewStart = Date.now();
+    req.session.questionCount = numQ;
+    req.session.difficulty = diff;
+    req.session.interviewResults = [];
+    req.session.interviewQuestions = [];
+    req.session.askedQuestions = [];
+    req.session.resumeText = resumeText;
+    
+    res.json({ success: true, message: 'Interview session started' });
+  } catch (err) {
+    console.error("Interview start error:", err);
+    res.status(500).json({ error: "Failed to start interview" });
+  }
 });
 
 app.post('/api/interview/chat-next', protectRoute, async (req, res) => {
   console.time("API: /api/interview/chat-next");
   try {
-    const { conversation, resumeText, difficulty, totalQuestions } = req.body;
+    const { conversation, difficulty, totalQuestions } = req.body;
+    const resumeText = req.session.resumeText || "";
     const currentIdx = conversation.length;
     
     // Track asked questions using a Set to avoid duplicates (PART 5)
@@ -436,37 +486,137 @@ app.post('/upload-resume', protectRoute, upload.single('resume'), async (req, re
 //  ATS SCORING (Ollama Engine)
 // ═══════════════════════════════════════════════════════════════
 
-app.post('/api/ats/score', protectRoute, async (req, res) => {
-  const { jobDescription } = req.body;
-  const user = await userStore.findUserById(req.mongoUser._id);
-  const filename = user?.resumeName || 'resume.pdf';
-  const resumePath = user?.resumePath;
+app.get('/api/health/ollama', async (req, res) => {
+  try {
+    const fetchAPI = typeof fetch !== 'undefined' ? fetch : (...args) => import('node-fetch').then(({default: f}) => f(...args));
+    const response = await fetchAPI("http://localhost:11434/api/tags");
+    if (response.ok) return res.json({ status: "ok" });
+    return res.status(500).json({ status: "error", error: "Ollama not responding" });
+  } catch (e) {
+    return res.status(500).json({ status: "error", error: "Ollama not running" });
+  }
+});
 
-  if (!jobDescription || !jobDescription.trim()) {
-    return res.status(400).json({ error: 'Job description is required for ATS scoring.' });
+async function runOllama(prompt) {
+  // fallback for older node versions
+  const fetchAPI = typeof fetch !== 'undefined' ? fetch : (...args) => import('node-fetch').then(({default: f}) => f(...args));
+  
+  const response = await fetchAPI("http://localhost:11434/api/generate", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model: "phi3",
+      prompt,
+      stream: false,
+      format: "json", // Strict JSON mode
+      options: {
+        num_predict: 300,   // Force sub-5 second generation threshold
+        temperature: 0.1    // Zero creativity, just strict evaluation
+      }
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error(`Ollama API error: ${response.statusText}`);
   }
 
-  // Extract text from PDF resume
-  let resumeText = '';
-  if (resumePath && fs.existsSync(resumePath)) {
-    try {
-      const pdfBuffer = fs.readFileSync(resumePath);
-      const pdfData = await pdfParse(pdfBuffer);
-      resumeText = pdfData.text;
-    } catch (pdfErr) {
-      console.warn('[ATS] PDF parse failed, using filename only:', pdfErr.message);
-      resumeText = `Resume: ${filename} (text extraction failed — scoring based on metadata only)`;
-    }
-  } else {
-    resumeText = `Resume: ${filename} (file not found on disk — scoring based on metadata only)`;
+  const data = await response.json();
+  return data.response;
+}
+
+app.post('/api/ats/analyze', protectRoute, upload.single('resume'), async (req, res) => {
+  const jobDesc = req.body.jobDesc || req.body.jobDescription;
+  
+  if (!req.file || !jobDesc) {
+    return res.status(400).json({ error: "Missing resume or job description" });
   }
 
   try {
-    const result = await scoreResume(resumeText, jobDescription.trim(), filename);
-    return res.json({ ...result, source: 'ollama-ats', resumeText });
+    const dataBuffer = fs.readFileSync(req.file.path);
+    const pdfData = await pdfParse(dataBuffer);
+    const resumeText = pdfData.text;
+
+    console.log("Resume length:", resumeText.length);
+
+    if (!resumeText || resumeText.trim().length === 0) {
+      return res.status(400).json({ error: "Resume parsing failed" });
+    }
+
+    const prompt = `
+Evaluate this resume strictly against the job description. Be HARSH. Average is 50.
+Output ONLY valid JSON explicitly matching this compact schema exactly (no extra text):
+{
+  "s": 45,
+  "k": ["React"],
+  "m": ["Node", "AWS"],
+  "sec": {
+    "Contact": [20, 20, ""],
+    "Summary": [5, 10, "Too generic"],
+    "Experience": [15, 30, "No metrics"],
+    "Education": [10, 10, ""],
+    "Skills": [5, 20, "Missing AWS"],
+    "Format": [8, 10, ""]
+  },
+  "c": [
+    ["Missing limits", "Add metrics to experience"]
+  ]
+}
+
+Resume:
+${resumeText.substring(0, 1500)}
+
+Job:
+${jobDesc.substring(0, 1500)}
+`;
+
+    console.time("Ollama Response");
+    const resultStr = await runOllama(prompt);
+    console.timeEnd("Ollama Response");
+    
+    // Parse the JSON safely
+    let parsedResult = {};
+    try {
+      const match = resultStr.match(/\{[\s\S]*\}/);
+      const raw = match ? JSON.parse(match[0]) : JSON.parse(resultStr);
+      
+      // Remap the compressed JSON to the frontend's expected ATSResult structure
+      parsedResult.score = raw.s || raw.overallScore || 50;
+      parsedResult.matches = raw.k || raw.matchedKeywords || [];
+      parsedResult.missing = raw.m || raw.missingKeywords || [];
+      
+      parsedResult.sections = {};
+      if (raw.sec) {
+        for (const [key, val] of Object.entries(raw.sec)) {
+          parsedResult.sections[key] = {
+            score: val[0],
+            max: val[1],
+            issues: val[2] ? [val[2]] : [],
+            suggestions: []
+          };
+        }
+      }
+      
+      parsedResult.criticalIssues = [];
+      if (raw.c) {
+        parsedResult.criticalIssues = raw.c.map(iss => ({
+          issue: iss[0],
+          fix: iss[1]
+        }));
+      }
+      
+      parsedResult.feedback = "Analysis completed.";
+      
+    } catch(e) {
+      console.warn("Failed to parse ATS JSON:", e, "Raw output:", resultStr.substring(0, 100));
+      return res.status(500).json({ error: "AI generated invalid JSON. Please try again." });
+    }
+
+    res.json(parsedResult);
   } catch (err) {
-    console.error('[ATS] Scoring failed:', err.message);
-    return res.status(500).json({ error: 'ATS scoring failed. Please try again.' });
+    console.error('[ATS] Scoring failed:', err);
+    return res.status(500).json({ error: 'ATS analysis failed.' });
   }
 });
 
@@ -592,7 +742,7 @@ app.post('/save-report', protectRoute, async (req, res) => {
   }
 });
 
-app.get('/reports', protectRoute, async (req, res) => {
+app.get('/api/reports', protectRoute, async (req, res) => {
   try {
     const reports = await InterviewReport.find({ userId: req.mongoUser._id }).sort({ date: -1 });
     res.json(reports);
@@ -602,7 +752,7 @@ app.get('/reports', protectRoute, async (req, res) => {
   }
 });
 
-app.get('/report/:id', protectRoute, async (req, res) => {
+app.get('/api/report/:id', protectRoute, async (req, res) => {
   try {
     const report = await InterviewReport.findOne({ _id: req.params.id, userId: req.mongoUser._id });
     if (!report) return res.status(404).json({ error: 'Report not found' });
@@ -668,14 +818,14 @@ app.get('/api/mcq-dataset', protectRoute, (req, res) => {
   }
 });
 
-app.post('/api/mcq-questions', protectRoute, async (req, res) => {
-  console.time("API: /api/mcq-questions");
+app.post('/api/mcq/start', protectRoute, async (req, res) => {
+  console.time("API: /api/mcq/start");
   const { topic, company, difficulty, numberOfQuestions } = req.body;
   const numQs = parseInt(numberOfQuestions) || 5;
   
   const cacheKey = `mcq_${topic}_${company}_${difficulty}_${numQs}`;
   if (questionCache.has(cacheKey)) {
-    console.timeEnd("API: /api/mcq-questions");
+    console.timeEnd("API: /api/mcq/start");
     return sendSuccess(res, questionCache.get(cacheKey));
   }
 
@@ -690,11 +840,11 @@ app.post('/api/mcq-questions', protectRoute, async (req, res) => {
     const result = { questions };
     
     questionCache.set(cacheKey, result);
-    console.timeEnd("API: /api/mcq-questions");
+    console.timeEnd("API: /api/mcq/start");
     return sendSuccess(res, result);
   } catch (err) {
     console.error("MCQ gen error:", err);
-    console.timeEnd("API: /api/mcq-questions");
+    console.timeEnd("API: /api/mcq/start");
     return sendSuccess(res, { questions: (mcqDataset || []).slice(0, numQs) });
   }
 });

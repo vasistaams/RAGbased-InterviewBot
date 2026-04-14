@@ -12,12 +12,32 @@ import {
 
 import api from "../services/api";
 
+interface SectionGrade {
+  score: number;
+  max: number;
+  issues: string[];
+  suggestions: string[];
+}
+
+interface CriticalIssue {
+  issue: string;
+  fix: string;
+}
+
 interface ATSResult {
   score: number;
   grade: string;
   matches: string[];
   missing: string[];
-  suggestions?: string[];
+  sections?: {
+    contact?: SectionGrade;
+    summary?: SectionGrade;
+    experience?: SectionGrade;
+    education?: SectionGrade;
+    skills?: SectionGrade;
+    formatting?: SectionGrade;
+  };
+  criticalIssues?: CriticalIssue[];
   feedback?: string;
   source?: string;
 }
@@ -72,18 +92,32 @@ export default function ATS() {
     setResults(null);
 
     try {
-      const res = await api.post("/ats/score", {
-        jobDescription: jobDesc.trim(),
+      const formData = new FormData();
+      formData.append("resume", file);
+      formData.append("jobDesc", jobDesc.trim());
+
+      const res = await api.post("/ats/analyze", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
       });
 
       const data = res.data;
+      
+      const overall = data.overallScore ?? data.score ?? 0;
+      let grade = "Poor";
+      if (overall >= 80) grade = "Excellent";
+      else if (overall >= 60) grade = "Good";
+      else if (overall >= 40) grade = "Average";
+
       setResults({
-        score: data.score ?? data.overallScore ?? 0,
-        grade: data.grade ?? "N/A",
-        matches: data.matches ?? data.matchedKeywords ?? [],
-        missing: data.missing ?? data.missingKeywords ?? [],
-        suggestions: data.suggestions ?? [],
-        feedback: data.feedback ?? data.summary ?? "",
+        score: overall,
+        grade,
+        matches: data.matchedKeywords ?? data.matches ?? [],
+        missing: data.missingKeywords ?? data.missing ?? [],
+        sections: data.sections,
+        criticalIssues: data.criticalIssues,
+        feedback: data.feedback ?? "Analysis completed successfully.",
         source: data.source,
       });
     } catch (err: unknown) {
@@ -348,8 +382,78 @@ export default function ATS() {
                 </div>
               </div>
 
-              {/* Feedback */}
-              {results.feedback && (
+              {/* Critical Issues */}
+              {results.criticalIssues && results.criticalIssues.length > 0 && (
+                <div className="rounded-2xl bg-white dark:bg-[#1a1528] border border-red-200 dark:border-red-900/40 shadow-card p-5">
+                  <h3 className="text-sm font-semibold text-red-600 dark:text-red-400 mb-4 flex items-center gap-2">
+                    <XCircle size={16} /> Critical Issues to Fix
+                  </h3>
+                  <div className="space-y-4">
+                    {results.criticalIssues.map((c, i) => (
+                      <div key={i} className="flex gap-3 items-start border-b border-gray-100 dark:border-gray-800 last:border-0 pb-3 last:pb-0">
+                        <div className="w-1.5 h-1.5 rounded-full bg-red-500 mt-2 shrink-0" />
+                        <div>
+                          <p className="text-sm font-medium text-gray-800 dark:text-gray-200">{c.issue}</p>
+                          <p className="text-xs text-brand-600 dark:text-brand-400 mt-1">👉 Fix: {c.fix}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Section Analysis Breakdown */}
+              {results.sections && Object.keys(results.sections).length > 0 && (
+                <div className="rounded-2xl bg-white dark:bg-[#1a1528] border border-brand-100/40 dark:border-brand-800/20 shadow-card p-5">
+                  <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-4">
+                    Section-wise Breakdown
+                  </h3>
+                  <div className="space-y-4">
+                    {Object.entries(results.sections).map(([key, data]) => {
+                      const section = data as any;
+                      const sScore = section.score;
+                      const sMax = section.max;
+                      const ratio = sScore / sMax;
+                      const color = ratio >= 0.8 ? "text-emerald-500" : ratio >= 0.5 ? "text-amber-500" : "text-red-500";
+                      
+                      return (
+                        <div key={key} className="border border-brand-100/40 dark:border-brand-800/20 rounded-xl p-4 bg-brand-50/20 dark:bg-brand-900/10">
+                          <div className="flex justify-between items-center mb-2">
+                            <span className="text-sm font-bold text-gray-800 dark:text-gray-200 capitalize">{key}</span>
+                            <span className={`text-sm font-bold ${color}`}>{sScore} / {sMax}</span>
+                          </div>
+                          {section.issues && section.issues.length > 0 ? (
+                            <ul className="mt-2 space-y-1">
+                              {section.issues.map((issue: string, idx: number) => (
+                                <li key={idx} className="text-xs text-gray-500 dark:text-gray-400 flex items-start gap-1.5">
+                                  <XCircle size={12} className="text-red-400 shrink-0 mt-0.5" />
+                                  <span>{issue}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          ) : (
+                            <p className="text-xs text-emerald-600 dark:text-emerald-400 flex items-center gap-1 mt-2">
+                              <CheckCircle size={12} /> Looks perfect!
+                            </p>
+                          )}
+                          {section.suggestions && section.suggestions.length > 0 && (
+                            <div className="mt-3 flex flex-wrap gap-1.5">
+                              {section.suggestions.map((s: string, idx: number) => (
+                                <span key={idx} className="text-[10px] px-2 py-0.5 rounded border border-brand-200 dark:border-brand-800 text-brand-600 dark:text-brand-400 bg-white dark:bg-black/20">
+                                  💡 {s}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* General Feedback Fallback */}
+              {!results.sections && results.feedback && (
                 <div className="rounded-2xl bg-white dark:bg-[#1a1528] border border-brand-100/40 dark:border-brand-800/20 shadow-card p-5">
                   <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
                     Expert Feedback

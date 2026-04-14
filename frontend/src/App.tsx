@@ -7,6 +7,7 @@ import { setTokenProvider } from "./services/api";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Dashboard from "./pages/Dashboard";
 import Interview from "./pages/Interview";
+import MCQ from "./pages/MCQ";
 import ATS from "./pages/ATS";
 import Reports from "./pages/Reports";
 import SettingsPage from "./pages/Settings";
@@ -102,6 +103,7 @@ export default function App() {
                   <Routes>
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/interview" element={<Interview />} />
+                    <Route path="/mcq" element={<MCQ />} />
                     <Route path="/ats" element={<ATS />} />
                     <Route path="/reports" element={<Reports />} />
                     <Route path="/settings" element={<SettingsPage />} />
