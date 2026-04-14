@@ -159,6 +159,49 @@ const upload = multer({
 // Preload knowledge base
 loadKnowledgeBase();
 
+// ─── Background MCQ Generator ─────────────────────────────────────
+async function startMCQGenerator() {
+  console.log("⏳ [Background Worker] MCQ Continuous Generation started...");
+  while (true) {
+    // Wait for 10 minutes between batches so we don't hog Ollama (600,000 ms)
+    await new Promise(r => setTimeout(r, 600000));
+    try {
+      const topics = ["DSA", "DBMS", "OS", "CN", "OOPS", "ML", "SQL", "JavaScript", "System Design", "React", "Node.js", "Java", "Python"];
+      const diffs = ["easy", "medium", "hard"];
+      const t = topics[Math.floor(Math.random() * topics.length)];
+      const d = diffs[Math.floor(Math.random() * diffs.length)];
+      
+      const prompt = `Generate exactly 5 completely new and tricky multiple choice questions about ${t} at ${d} difficulty.
+Output strictly as a JSON array matching this exact format (no markdown, no extra text):
+[
+  {
+    "topic": "${t}",
+    "company": "Tech",
+    "difficulty": "${d}",
+    "question": "Valid Question Here?",
+    "options": ["Opt1", "Opt2", "Opt3", "Opt4"],
+    "correctAnswer": "Opt1"
+  }
+]
+Avoid standard beginner questions. Keep it unique.`;
+
+      const response = await generateWithOllama(prompt, process.env.MODEL_PRIMARY || 'phi3', { temperature: 0.95, num_predict: 800 });
+      const newQs = extractJSON(response);
+      
+      if (Array.isArray(newQs) && newQs.length > 0 && newQs[0].question) {
+        mcqDataset.push(...newQs);
+        const p = process.env.MCQ_PATH || path.join(__dirname, 'data', 'mcq-questions.json');
+        fs.writeFileSync(p, JSON.stringify(mcqDataset, null, 2));
+        console.log(`✅ [Background Worker] Expanded dataset by ${newQs.length} new ${t} questions. (Current Total: ${mcqDataset.length})`);
+      }
+    } catch(e) {
+      console.warn("⚠️ [Background Worker] MCQ generation skipped this cycle.");
+    }
+  }
+}
+// Start without blocking the main server thread
+startMCQGenerator();
+
 // Discover endpoints skip - Using local Ollama and Modules
 
 // Health endpoint (PART 6)
