@@ -6,9 +6,7 @@ import {
   ChevronRight,
   Inbox,
 } from "lucide-react";
-
-import { raw } from "../services/api";
-
+import { api } from "../services/api";
 interface Report {
   _id: string;
   date: string;
@@ -31,8 +29,8 @@ export default function Reports() {
   useEffect(() => {
     async function load() {
       try {
-        // Backend route is GET /reports (root-level, not /api/reports)
-        const res = await raw.get("/reports");
+        // Backend route is GET /api/reports
+        const res = await api.get("/reports");
         setReports(Array.isArray(res.data) ? res.data : []);
       } catch (err) {
         console.error("Failed to load reports", err);
