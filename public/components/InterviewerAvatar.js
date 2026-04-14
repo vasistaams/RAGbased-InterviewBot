@@ -7,7 +7,6 @@ const InterviewerAvatar = {
   render: function(containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
-
     // Component mounts into the DOM
     container.innerHTML = `
       <div id="ai-avatar" class="interviewer-avatar" style="width:120px; height:120px; border-radius:50%; background: linear-gradient(135deg, var(--accent), var(--primary)); display:flex; align-items:center; justify-content:center; box-shadow:0 8px 24px rgba(139,92,246,0.3); transition: transform 0.15s ease, box-shadow 0.15s ease; margin: 0 auto 24px auto;">
