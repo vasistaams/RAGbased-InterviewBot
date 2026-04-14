@@ -81,19 +81,38 @@ export default function MCQ() {
         numberOfQuestions: count,
       });
       const raw = res.data?.data?.questions || res.data?.questions || [];
-      const qs: MCQQuestion[] = raw.map((q: any) => ({
-        question: q.question,
-        options: q.options || [
-          { label: "A", text: q.option_a || q.A || "" },
-          { label: "B", text: q.option_b || q.B || "" },
-          { label: "C", text: q.option_c || q.C || "" },
-          { label: "D", text: q.option_d || q.D || "" },
-        ],
-        answer: (q.answer || q.correct || "A").toUpperCase().replace(/[^ABCD]/g, "A"),
-        explanation: q.explanation || "",
-        topic: q.topic,
-        difficulty: q.difficulty,
-      }));
+      const qs: MCQQuestion[] = raw.map((q: any) => {
+        const labels = ["A", "B", "C", "D"];
+        // Options can be plain strings or {label, text} objects
+        const opts: MCQOption[] = (q.options || []).map((opt: any, idx: number) => {
+          if (typeof opt === "string") {
+            return { label: labels[idx] || String(idx), text: opt };
+          }
+          return { label: opt.label || labels[idx], text: opt.text || opt };
+        });
+
+        // correctAnswer can be the text itself (e.g. "Stack") or a label (e.g. "A")
+        let answerLabel = "A";
+        const ca = q.correctAnswer || q.answer || q.correct || "";
+        if (labels.includes(ca.toUpperCase())) {
+          answerLabel = ca.toUpperCase();
+        } else {
+          // Match by text content
+          const matchIdx = opts.findIndex(
+            (o) => o.text.toLowerCase().trim() === ca.toLowerCase().trim()
+          );
+          answerLabel = matchIdx >= 0 ? labels[matchIdx] : "A";
+        }
+
+        return {
+          question: q.question,
+          options: opts,
+          answer: answerLabel,
+          explanation: q.explanation || "",
+          topic: q.topic,
+          difficulty: q.difficulty,
+        };
+      });
       if (qs.length === 0) throw new Error("No questions returned");
       setQuestions(qs);
       setCurrent(0);

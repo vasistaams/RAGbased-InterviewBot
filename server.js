@@ -239,6 +239,7 @@ app.post('/api/interview/start', protectRoute, upload.single('resume'), async (r
     req.session.interviewResults = [];
     req.session.interviewQuestions = [];
     req.session.askedQuestions = [];
+    req.session.currentQuestionIdx = 0;
     req.session.resumeText = resumeText;
     
     res.json({ success: true, message: 'Interview session started' });
@@ -267,9 +268,12 @@ app.post('/api/interview/chat-next', protectRoute, async (req, res) => {
 
     if (currentIdx === 0) {
       const q = "Tell me about yourself and your background.";
+      const result = { question: q, category: "Introduction", difficulty: "easy", expectedAnswer: "Candidate should provide a concise overview of their background, education, key skills, and career goals." };
       req.session.askedQuestions.push(q);
+      req.session.interviewQuestions = req.session.interviewQuestions || [];
+      req.session.interviewQuestions.push(result);
       console.timeEnd("API: /api/interview/chat-next");
-      return sendSuccess(res, { question: q, category: "Introduction", difficulty: "easy" });
+      return sendSuccess(res, result);
     } else if (currentIdx <= 2) {
       focus = "Resume & Projects";
       specificPrompt = "Ask about a specific project or skill from their resume.";
@@ -296,6 +300,7 @@ ${contextStr}
 Task: Ask Question ${currentIdx + 1} of ${totalQuestions}.
 Focus: ${focus}
 Context: ${specificPrompt}
+Randomization Seed: ${Math.random().toString(36).substring(7)} - Use this seed to inspire a completely unique, unrepeated question.
 
 Rules:
 * Avoid repeating these: ${Array.from(usedQuestions).join(" | ")}
@@ -313,11 +318,15 @@ Rules:
     }
 
     req.session.askedQuestions.push(result.question);
+    req.session.interviewQuestions = req.session.interviewQuestions || [];
+    req.session.interviewQuestions.push(result);
     console.timeEnd("API: /api/interview/chat-next");
     return sendSuccess(res, result);
   } catch (err) {
     console.error("Chat-next error:", err);
     const fallback = getQuestionsByDifficulty(req.body.difficulty, 1)[0];
+    req.session.interviewQuestions = req.session.interviewQuestions || [];
+    req.session.interviewQuestions.push(fallback);
     console.timeEnd("API: /api/interview/chat-next");
     return sendSuccess(res, fallback);
   }
@@ -440,9 +449,8 @@ Return STRICT JSON:
       // Safety in Evaluation (Step 4)
       evaluation = {
         score: 50,
-        strengths: "Basic attempt",
-        weaknesses: "Evaluation unavailable",
-        improvement: "Try improving explanation clarity"
+        feedback: "AI evaluation was unavailable. A default score of 50 has been assigned based on your attempt.",
+        suggestions: ["Try to be more specific with technical terminology.", "Structure your answer using concrete examples."]
       };
     }
   }
@@ -571,9 +579,10 @@ Job:
 ${jobDesc.substring(0, 1500)}
 `;
 
-    console.time("Ollama Response");
+    const timerLabel = `Ollama ATS Response ${Date.now()}`;
+    console.time(timerLabel);
     const resultStr = await runOllama(prompt);
-    console.timeEnd("Ollama Response");
+    console.timeEnd(timerLabel);
     
     // Parse the JSON safely
     let parsedResult = {};
@@ -823,12 +832,6 @@ app.post('/api/mcq/start', protectRoute, async (req, res) => {
   const { topic, company, difficulty, numberOfQuestions } = req.body;
   const numQs = parseInt(numberOfQuestions) || 5;
   
-  const cacheKey = `mcq_${topic}_${company}_${difficulty}_${numQs}`;
-  if (questionCache.has(cacheKey)) {
-    console.timeEnd("API: /api/mcq/start");
-    return sendSuccess(res, questionCache.get(cacheKey));
-  }
-
   try {
     let filtered = mcqDataset || [];
     if (topic && topic !== 'All') {
@@ -839,7 +842,6 @@ app.post('/api/mcq/start', protectRoute, async (req, res) => {
     const questions = shuffle(filtered).slice(0, numQs);
     const result = { questions };
     
-    questionCache.set(cacheKey, result);
     console.timeEnd("API: /api/mcq/start");
     return sendSuccess(res, result);
   } catch (err) {

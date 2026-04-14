@@ -44,7 +44,7 @@ export function setTokenProvider(fn: () => Promise<string | null>) {
 const api = axios.create({
   baseURL: "/api",
   headers: { "Content-Type": "application/json" },
-  timeout: 30000,
+  timeout: 120000,
 });
 
 /**
@@ -54,7 +54,7 @@ const api = axios.create({
 const raw = axios.create({
   baseURL: "/",
   headers: { "Content-Type": "application/json" },
-  timeout: 30000,
+  timeout: 120000,
 });
 
 // ─── Auth Interceptor ────────────────────────────────────────
